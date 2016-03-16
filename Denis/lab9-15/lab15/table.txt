@@ -1,0 +1,4 @@
+12 Berlin 11 02
+3 Moscow 12 10
+8 Rostov 7 31
+15 Praga 6 08
