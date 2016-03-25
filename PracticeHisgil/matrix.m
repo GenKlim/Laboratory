@@ -40,9 +40,9 @@ function matrix()
         if key == 7
             a
             disp('Отсортировать строки матрицы по неубыванию максимальных элементов строк: ');
-            a=a'
-            a = [a;max(a)]
-            a=a'
+            a=a';
+            a = [a;max(a)];
+            a=a';
             a = sortrows(a,length(a))
             a(:,length(a)) = []
         end
