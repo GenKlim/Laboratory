@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <string>
 #include <cstdio>
@@ -218,12 +218,12 @@ struct S_Zeser : public S_Trisemus
 
 Scrambler* getScrambler()
 {
-	cout << "Ââåäèòå íîìåð ìåòîäà øèôðîâàíèÿ:" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¼ÐµÑ‚Ð¾Ð´Ð° ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ:" << endl;
 	cout << "1. XOR" << endl;
-	cout << "2. Øèôð Âèæåíåðà" << endl;
-	cout << "3. Øèôðóþùèå òàáëèöû Òðèñåìóñà" << endl;
-	cout << "4. Êâàäðàò Ïîëèáèÿ" << endl;
-	cout << "5. Øèôð Öåçàðÿ ñ êëþ÷åâûì ñëîâîì" << endl;
+	cout << "2. Ð¨Ð¸Ñ„Ñ€ Ð’Ð¸Ð¶ÐµÐ½ÐµÑ€Ð°" << endl;
+	cout << "3. Ð¨Ð¸Ñ„Ñ€ÑƒÑŽÑ‰Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Ð¢Ñ€Ð¸ÑÐµÐ¼ÑƒÑÐ°" << endl;
+	cout << "4. ÐšÐ²Ð°Ð´Ñ€Ð°Ñ‚ ÐŸÐ¾Ð»Ð¸Ð±Ð¸Ñ" << endl;
+	cout << "5. Ð¨Ð¸Ñ„Ñ€ Ð¦ÐµÐ·Ð°Ñ€Ñ Ñ ÐºÐ»ÑŽÑ‡ÐµÐ²Ñ‹Ð¼ ÑÐ»Ð¾Ð²Ð¾Ð¼" << endl;
 
 	int method = 0;
 	Scrambler* sh = 0;
@@ -242,7 +242,7 @@ Scrambler* getScrambler()
 		}
 	}
 
-	cout << "Ââåäèòå êëþ÷ øèôðîâàíèÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡ ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ: ";
 	cin.ignore();
 	getline(cin, sh->key);
 	return sh;
@@ -282,10 +282,10 @@ int main()
 
 	while (true)
 	{
-		cout << "1. Çàøèôðîâàòü ôàéë" << endl;
-		cout << "2. Ðàñøèôðîâàòü ôàéë" << endl;
-		cout << "3. Çàøèôðîâàòü òåêñò" << endl;
-		cout << "4. Ðàñøèôðîâàòü òåêñò" << endl;
+		cout << "1. Ð—Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ„Ð°Ð¹Ð»" << endl;
+		cout << "2. Ð Ð°ÑÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ„Ð°Ð¹Ð»" << endl;
+		cout << "3. Ð—Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ‚ÐµÐºÑÑ‚" << endl;
+		cout << "4. Ð Ð°ÑÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ‚ÐµÐºÑÑ‚" << endl;
 
 		cin >> m;
 		s = getScrambler();
@@ -293,33 +293,33 @@ int main()
 		switch (m)
 		{
 		case '1':
-			cout << "Ââåäèòå èìÿ ôàéëà:" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°:" << endl;
 			getline(cin, msg);
 			buff = s->Code(readFile(msg, &len));
 			writeFile(msg + ".lock", buff, len);
-			cout << "Çàøèôðîâàíûé ôàéë:" << endl << msg << ".lock" << endl;
+			cout << "Ð—Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð»:" << endl << msg << ".lock" << endl;
 			break;
 		case '2':
-			cout << "Ââåäèòå èìÿ çàøèôðîâàíîãî ôàéëà:" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð·Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°:" << endl;
 			getline(cin, msg);
 			buff = s->Decode(readFile(msg, &len));
 			writeFile(msg + ".unlock", buff, len);
-			cout << "Ðàñøèôðîâàíûé ôàéë:" << endl << msg << ".unlock" << endl;
+			cout << "Ð Ð°ÑÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð»:" << endl << msg << ".unlock" << endl;
 			break;
 		case '3':
-			cout << "Ââåäèòå çàøèôðîâàííîå ñîîáùåíèå:" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ:" << endl;
 			getline(cin, msg);
 			buff = s->Code(vector<uchar>(msg.begin(), msg.end()));
 			rez = string(buff.begin(), buff.end());
-			cout << "Çàøèôðîâàííîå ñîîáùåíèå:" << endl;
+			cout << "Ð—Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ:" << endl;
 			cout << rez << endl;
 			break;
 		case '4':
-			cout << "Ââåäèòå çàøèôðîâàííîå ñîîáùåíèå:" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ:" << endl;
 			getline(cin, msg);
 			buff = s->Decode(vector<uchar>(msg.begin(), msg.end()));
 			rez = string(buff.begin(), buff.end());
-			cout << "Ðàñøèôðîâàííîå ñîîáùåíèå:" << endl;
+			cout << "Ð Ð°ÑÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ:" << endl;
 			cout << rez << endl;
 			break;
 		}
