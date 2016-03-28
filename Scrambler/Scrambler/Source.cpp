@@ -1,23 +1,26 @@
 #include <iostream>
-#include <cstring>
+#include <fstream>
+#include <string>
 #include <cstdio>
 #include <locale.h>
-#include <string>
+#include <vector>
 
 using namespace std;
+
+typedef unsigned char uchar;
 
 struct Scrambler
 {
 	string key;
-	virtual string Code(string input) = 0;
-	virtual string Decode(string input) = 0;
+	virtual vector<uchar> Code(vector<uchar> input) = 0;
+	virtual vector<uchar> Decode(vector<uchar> input) = 0;
 };
 
 struct S_XOR : public Scrambler
 {
-	string Code(string input)
+	vector<uchar> Code(vector<uchar> input)
 	{
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		int n = 0;
 		for (auto i = output.begin(); i != output.end(); i++, n++)
 			*i = *i ^ key[n % key.size()];
@@ -25,7 +28,7 @@ struct S_XOR : public Scrambler
 		return output;
 	}
 
-	string Decode(string input)
+	vector<uchar> Decode(vector<uchar> input)
 	{
 		return Code(input);
 	}
@@ -33,9 +36,9 @@ struct S_XOR : public Scrambler
 
 struct S_Vigenere : public Scrambler
 {
-	string Code(string input)
+	vector<uchar> Code(vector<uchar> input)
 	{
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		int n = 0;
 		for (auto i = output.begin(); i != output.end(); i++, n++)
 			*i = *i + key[n % key.size()];
@@ -43,9 +46,9 @@ struct S_Vigenere : public Scrambler
 		return output;
 	}
 
-	string Decode(string input)
+	vector<uchar> Decode(vector<uchar> input)
 	{
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		int n = 0;
 		for (auto i = output.begin(); i != output.end(); i++, n++)
 			*i = *i - key[n % key.size()];
@@ -56,9 +59,9 @@ struct S_Vigenere : public Scrambler
 
 struct S_Trisemus : public Scrambler
 {
-	char* makeTable()
+	uchar* makeTable()
 	{
-		char* abc = new char[256];
+		uchar* abc = new uchar[256];
 		int j = 0;
 
 		for (auto i = key.begin(); i != key.end(); i++)
@@ -73,7 +76,7 @@ struct S_Trisemus : public Scrambler
 				abc[j++] = *i;
 		}
 
-		for (unsigned char i = 0; i < 255; i++)
+		for (uchar i = 0; i < 255; i++)
 		{
 			bool flag = true;
 			for (int k = 0; k < j && flag; k++)
@@ -88,11 +91,11 @@ struct S_Trisemus : public Scrambler
 		return abc;
 	}
 
-	string Code(string input)
+	vector<uchar> Code(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		for (auto i = output.begin(); i != output.end(); i++)
 		{
 			for (int j = 0; j < 255; j++)
@@ -109,11 +112,11 @@ struct S_Trisemus : public Scrambler
 		return output;
 	}
 
-	string Decode(string input)
+	vector<uchar> Decode(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		for (auto i = output.begin(); i != output.end(); i++)
 		{
 			for (int j = 0; j < 255; j++)
@@ -136,22 +139,22 @@ struct S_Trisemus : public Scrambler
 
 struct S_Polybiy : public S_Trisemus
 {
-	string Code(string input)
+	vector<uchar> Code(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
 		if (input.size() % 2)
-			input += ' ';
+			input.push_back(' ');
 
-		string output;
+		vector<uchar> output;
 		for (auto i = input.begin(); i != input.end(); i++)
 		{
 			for (int j = 0; j < 255; j++)
 			{
 				if (abc[j] == *i)
 				{
-					output += (char)(j % 32);
-					output += (char)(j/32);
+					output.push_back((uchar)(j % 32));
+					output.push_back((uchar)(j / 32));
 					break;
 				}
 			}
@@ -161,15 +164,15 @@ struct S_Polybiy : public S_Trisemus
 		return output;
 	}
 
-	string Decode(string input)
+	vector<uchar> Decode(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
-		string output;
+		vector<uchar> output;
 		for (auto i = input.begin(); i != input.end(); i++)
 		{
 			int index = *i + *(++i) * 32;
-			output += abc[index];
+			output.push_back(abc[index]);
 		}
 
 		delete[] abc;
@@ -179,11 +182,11 @@ struct S_Polybiy : public S_Trisemus
 
 struct S_Zeser : public S_Trisemus
 {
-	string Code(string input)
+	vector<uchar> Code(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		for (auto i = output.begin(); i != output.end(); i++)
 			*i = abc[*i];
 
@@ -191,18 +194,18 @@ struct S_Zeser : public S_Trisemus
 		return output;
 	}
 
-	string Decode(string input)
+	vector<uchar> Decode(vector<uchar> input)
 	{
-		char* abc = makeTable();
+		uchar* abc = makeTable();
 
-		string output = string(input);
+		vector<uchar> output = vector<uchar>(input);
 		for (auto i = output.begin(); i != output.end(); i++)
 		{
 			for (int j = 0; j < 255; j++)
 			{
 				if (abc[j] == *i)
 				{
-					*i = (char)j;
+					*i = (uchar)j;
 					break;
 				}
 			}
@@ -223,48 +226,106 @@ Scrambler* getScrambler()
 	cout << "5. Шифр Цезаря с ключевым словом" << endl;
 
 	int method = 0;
-	while (method < 1 || method > 5)
+	Scrambler* sh = 0;
+
+	while (!sh)
+	{
 		cin >> method;
 
-	Scrambler* s;
-	switch (method)
-	{
-	case 1:
-		return new S_XOR;
-	case 2:
-		return new S_Vigenere;
-	case 3:
-		return new S_Trisemus;
-	case 4:
-		return new S_Polybiy;
-	case 5:
-		return new S_Zeser;
+		switch (method)
+		{
+		case 1: sh = new S_XOR; break;
+		case 2: sh = new S_Vigenere; break;
+		case 3: sh = new S_Trisemus; break;
+		case 4: sh = new S_Polybiy; break;
+		case 5: sh = new S_Zeser; break;
+		}
 	}
+
+	cout << "Введите ключ шифрования: ";
+	cin.ignore();
+	getline(cin, sh->key);
+	return sh;
+}
+
+vector<uchar> readFile(string filename, int* len)
+{
+	ifstream ifs(filename, ios::binary | ios::ate);
+	*len = (int)ifs.tellg();
+
+	uchar *buffer = new uchar[*len];
+	ifs.seekg(0, ios::beg);
+	ifs.read((char*)buffer, *len);
+	ifs.close();
+
+	vector<uchar> result(buffer, buffer + *len);
+	delete buffer;
+	return result;
+}
+
+void writeFile(string filename, const vector<uchar>& buffer, int len)
+{
+	ofstream ofs(filename, ios::binary | ios::ate);
+	ofs.write((char*)buffer.data(), len);
+	ofs.close();
 }
 
 int main()
 {
 	setlocale(LC_ALL, "");
-	
+
 	string msg, rez;
-	Scrambler* s = getScrambler();
+	vector<uchar> buff;
+	Scrambler* s;
+	uchar m;
+	int len;
 
-	cout << "Введите сообщение: " << endl;
-	cin.ignore();
-	getline(cin, msg);
+	while (true)
+	{
+		cout << "1. Зашифровать файл" << endl;
+		cout << "2. Расшифровать файл" << endl;
+		cout << "3. Зашифровать текст" << endl;
+		cout << "4. Расшифровать текст" << endl;
 
-	cout << "Введите ключ шифрования: ";
-	getline(cin, s->key);
+		cin >> m;
+		s = getScrambler();
 
-	rez = s->Code(msg);
-	cout << "Зашифрованное сообщение: " << endl;
-	cout << rez << endl;
-
-	msg = s->Decode(rez);
-	cout << "Расшифрованное сообщение: " << endl;
-	cout << msg << endl;
-
-	delete s;
+		switch (m)
+		{
+		case '1':
+			cout << "Введите имя файла:" << endl;
+			getline(cin, msg);
+			buff = s->Code(readFile(msg, &len));
+			writeFile(msg + ".lock", buff, len);
+			cout << "Зашифрованый файл:" << endl << msg << ".lock" << endl;
+			break;
+		case '2':
+			cout << "Введите имя зашифрованого файла:" << endl;
+			getline(cin, msg);
+			buff = s->Decode(readFile(msg, &len));
+			writeFile(msg + ".unlock", buff, len);
+			cout << "Расшифрованый файл:" << endl << msg << ".unlock" << endl;
+			break;
+		case '3':
+			cout << "Введите зашифрованное сообщение:" << endl;
+			getline(cin, msg);
+			buff = s->Code(vector<uchar>(msg.begin(), msg.end()));
+			rez = string(buff.begin(), buff.end());
+			cout << "Зашифрованное сообщение:" << endl;
+			cout << rez << endl;
+			break;
+		case '4':
+			cout << "Введите зашифрованное сообщение:" << endl;
+			getline(cin, msg);
+			buff = s->Decode(vector<uchar>(msg.begin(), msg.end()));
+			rez = string(buff.begin(), buff.end());
+			cout << "Расшифрованное сообщение:" << endl;
+			cout << rez << endl;
+			break;
+		}
+		cout << endl;
+		delete s;
+	}
 
 	system("pause");
 	return EXIT_SUCCESS;
