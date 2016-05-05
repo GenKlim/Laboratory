@@ -102,13 +102,15 @@ public class NewJFrame extends javax.swing.JFrame
         
         timer.stop();
         
-        //Отключение кнопок и установка мин, надеюсь понятно (это лямбда выражение)
-        Positions.forEach((cell, pos)->
+        //Отключение кнопок и установка мин
+        for(Map.Entry<JLabel, Point> k : Positions.entrySet()) 
         {
+            JLabel cell = k.getKey();
+            Point pos = k.getValue();
             if(Task[pos.i][pos.j] == state_mine)
                 cell.setIcon(new ImageIcon(NewJFrame.class.getResource("mine.png")));
             cell.removeMouseListener(labelMouseClickListener);
-        });
+        }
     }
     
     // Перебор всех ячеек, проверка на корректность
@@ -219,9 +221,8 @@ public class NewJFrame extends javax.swing.JFrame
             .addGroup(gameStatePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(gameStatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(gameStatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(newGamebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(mineTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(newGamebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mineTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -336,7 +337,14 @@ public class NewJFrame extends javax.swing.JFrame
         
         time = 0;
         if(timer == null)
-            timer = new Timer(1000, e->timeTextField.setText(String.format("%03d", ++time)));
+        {
+            timer = new Timer(1000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent evt) {
+                    timeTextField.setText(String.format("%03d", ++time));
+                }
+            });
+        }
         timer.start();
         
         SelectCount = 0;
@@ -346,7 +354,7 @@ public class NewJFrame extends javax.swing.JFrame
         fillTask();
         makeField();
     }//GEN-LAST:event_newGamebtnActionPerformed
-
+    
     private void exitMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMIActionPerformed
         dispose();
     }//GEN-LAST:event_exitMIActionPerformed
