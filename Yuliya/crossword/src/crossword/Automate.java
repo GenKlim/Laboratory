@@ -3,47 +3,59 @@ package crossword;
 import java.util.List;
 import java.util.Stack;
 
+/*
+    Класс автомата
+    Создается по условию для строки
+    Умеет проверять подходит ли строка условию
+*/
+
 class Automate
 {
+        /*
+            Класс состояния автомата
+            Имеет две ссылки на другие сосояния (1 и 0)
+        */
 	public class State
 	{
 		State nextTrue;
 		State nextFalse;
 
+                //Возвращает ссылку на следущее состояние по значению (1 или 0)
 		public State get(boolean value)
 		{
 			return value ? nextTrue:nextFalse;
 		}
 	}
 
+        //Начальное и конечное состояние
 	State start;
 	State end;
 
+        //Конструктор, создает автомат по строке(или столбцу, тут это не важно)
+        //Ему так же нужен максимальный размерстроки
+        //data - строка с описанием (список чисел, указывающих на количество подряд идущих закрашенных ячеек)
 	public Automate(List<Integer> data, int maxSize)
 	{
-		State st;
-
-		int sum = -1;
+		int sum = -1;//Считает минимальную длинну строки
 		for(int i : data)
 			sum += i + 1;
 
-		start = new State();
-		end = start;
+		start = new State();//Создаем начальное состояние
+		end = start;//Как только будем создовать новое состояние, будем днлать его конечным
 
-		boolean f = false;
-
+                //Для каждой группы подряд идущих закрашенных клеток
+		State st;
 		for(int i = 0; i < data.size(); i++)
 		{
-			if(f)
+			if(i!=0)//Если не первое состояние, нужно постоавить "ноль" (не закрашеная ячейка) для того что разделить группы
 			{
-				st = new State();
+				st = new State();//Состояние с нулем (на схеме с петелькой, позволяет считать сколь угодно много нулей подряд)
 				st.nextFalse = st;
 				end.nextFalse = st;
 				end = st;
 			}
-			else
-				f = true;
-
+                        
+                        //Создаем сотолько состояний, сколько закрашенных клеток в группе
 			for(int j = 0; j < data.get(i); j++)
 			{
 				st = new State();
@@ -52,6 +64,7 @@ class Automate
 			}
 		}
 
+                //Если строка из условия data может не полностью заполнить строку кросворда то делаю петельки в начале и в конце
 		if(sum != maxSize)
 		{
 			start.nextFalse = start;
@@ -59,40 +72,51 @@ class Automate
 		}
 	}
 
+        // Проверяет подходит ли строка условию
+        // row - строка красворда, состоит из обьектов StatusObject
 	public boolean IsValid(List<StatusObject> row)
 	{
-		Stack<State> next, currents = new Stack<>();
-		currents.push(start);
+            //Тут нужно 2 стека, можно было использовать и List но стек удобней здесь
+            //Один из стеков хранит все возможные состояния, которые можно получить из всех состояний другово стека
+            //Они будут чередоватся, пока переберается один заполняется второй
+            //Потом они меняются и цикл повторяется
+            
+            Stack<State> next, currents = new Stack<>();//Стеки
+            currents.push(start);//Начинам с первого состояния
 
-		for(StatusObject s : row)
-		{
-			next = new Stack<>();
-			while(!currents.empty())
-			{
-				if(s.isNone())
-				{
-					State st = currents.pop();
-					if(st.nextFalse != null)
-						next.push(st.nextFalse);
-					if(st.nextTrue != null)
-						next.push(st.nextTrue);
-				}
-				else
-				{
-					State st = currents.pop().get(s.isWhite());
-					if(st != null)
-						next.push(st);
-				}
-			}
-			currents = next;
-		}
+            for(StatusObject s : row)//Для каждой ячейки строки
+            {
+                next = new Stack<>();//Создаем стек, который будем заполнять новыми состояними
+                while(!currents.empty())//Пока стек с текущими состояниями не пуст
+                {
+                    if(s.isNone())//Если ячейка не установленна (может быть как черной так и белой)
+                    {
+                        State st = currents.pop();//Снимаем очередное состояние
+                        if(st.nextFalse != null)//Если оно может перейти по ветке с нулюм то запишем это состояние
+                                next.push(st.nextFalse);
+                        if(st.nextTrue != null)//Если оно может перейти по ветке с еденицой то запишем это состояние
+                                next.push(st.nextTrue);
+                    }
+                    else
+                    {
+                        //Иначе (если ячейка либо черная либо белая)
+                        //Достаем из стека очередное состояние и получаем из него следущее в соответствии с цветом ячейки
+                        State st = currents.pop().get(s.isWhite());
+                        if(st != null)//Если отакое существует то запишем это состояние
+                                next.push(st);
+                    }
+                }
+                currents = next;//Меняем стеки местами (точнее прсто копирует)
+            }
 
-		while(!currents.empty())
-		{
-			if(currents.pop() == end)
-				return true;
-		}
+            //Перебераем все состояния к которым пришли (если они вообще существуют)
+            while(!currents.empty())
+            {
+                //Если хоть один из них является концом, то row соответствует условию автомата
+                if(currents.pop() == end)
+                        return true;
+            }
 
-		return false;
+            return false;//row не соответствует условию автомата
 	}
 }
