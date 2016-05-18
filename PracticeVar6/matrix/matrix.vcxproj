@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5AE95F4B-7BC9-4904-A789-3907B37B9715}</ProjectGuid>
+    <ProjectGuid>{36A0197E-ADCC-434E-A48F-4F191545BD47}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PracticeVar6</RootNamespace>
+    <RootNamespace>matrix</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>vector</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

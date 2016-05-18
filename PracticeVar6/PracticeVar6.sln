@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PracticeVar6", "PracticeVar6\PracticeVar6.vcxproj", "{5AE95F4B-7BC9-4904-A789-3907B37B9715}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vector", "PracticeVar6\PracticeVar6.vcxproj", "{5AE95F4B-7BC9-4904-A789-3907B37B9715}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matrix", "matrix\matrix.vcxproj", "{36A0197E-ADCC-434E-A48F-4F191545BD47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{5AE95F4B-7BC9-4904-A789-3907B37B9715}.Release|x64.Build.0 = Release|x64
 		{5AE95F4B-7BC9-4904-A789-3907B37B9715}.Release|x86.ActiveCfg = Release|Win32
 		{5AE95F4B-7BC9-4904-A789-3907B37B9715}.Release|x86.Build.0 = Release|Win32
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Debug|x64.ActiveCfg = Debug|x64
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Debug|x64.Build.0 = Debug|x64
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Debug|x86.ActiveCfg = Debug|Win32
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Debug|x86.Build.0 = Debug|Win32
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Release|x64.ActiveCfg = Release|x64
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Release|x64.Build.0 = Release|x64
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Release|x86.ActiveCfg = Release|Win32
+		{36A0197E-ADCC-434E-A48F-4F191545BD47}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
