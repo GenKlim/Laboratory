@@ -1,13 +1,8 @@
 package crossword;
 
-/*
-    Простой класс для хранения состояния ячейки
-    Может быть установлен в Black None или White
-*/
-
 class StatusObject
 {
-	private short value = 0;//Внутри просто число (0 - None, 1-Black,2-White)
+	private short value = 0;
         
         //Установка состояния
 	public StatusObject setNone()
@@ -48,10 +43,4 @@ class StatusObject
 		return value == 2;
 	}
 
-        //Преоброзование в строку, нужно только для того чтоб при отладке видить текстовое значение
-	@Override
-	public String toString()
-	{
-		return isWhite() ? "white":isBlack()?"black":"none";
-	}
 }
