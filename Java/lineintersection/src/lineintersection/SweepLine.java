@@ -2,13 +2,15 @@ package lineintersection;
 
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
+// Класс продставляющий статус заметающей прямой
 class SweepLine
 {
-	private static final double EPS = 1E-9;
-	private List<Segment> data = new ArrayList<>();
+	private List<Segment> data = new ArrayList<>();//Список отрезков
 
+        //Отрезок
 	private class Segment implements Comparable<Segment>
 	{
 		double y;
@@ -20,6 +22,7 @@ class SweepLine
 			this.line = line;
 		}
 
+                //Для сортировки
 		@Override
 		public int compareTo(Segment o)
 		{
@@ -27,13 +30,19 @@ class SweepLine
 		}
 	}
 
-	void insert(Line2D line, double x)
+	void insert(Line2D line, double x)//Вставка отрезка
 	{
 		double y = getY(line, x);
 		data.add(new Segment(line, y));
-		data.sort(Segment::compareTo);
+		data.sort(new Comparator<Segment>() {//Сортировка
+                    @Override
+                    public int compare(Segment segment, Segment o) {
+                        return segment.compareTo(o);
+                    }
+                });
 	}
 
+        //Поменять местами
 	void swap(Line2D a, Line2D b)
 	{
 		Segment last = null;
@@ -49,6 +58,7 @@ class SweepLine
 		}
 	}
 
+        //Удалить
 	void remove(Line2D line)
 	{
 		for(Segment s : data)
@@ -61,6 +71,7 @@ class SweepLine
 		}
 	}
 
+        //Отрезок, находящийся выше
 	Line2D getUp(Line2D line)
 	{
 		Line2D last = null;
@@ -73,6 +84,7 @@ class SweepLine
 		return null;
 	}
 
+        //Отрезок, находящийся ниже
 	Line2D getDown(Line2D line)
 	{
 		boolean found = false;
@@ -86,9 +98,10 @@ class SweepLine
 		return null;
 	}
 
+        //Получает y по x
 	private static double getY(Line2D line, double x)
 	{
-		if(Math.abs(line.getX1() - line.getX2()) < EPS)
+		if(Math.abs(line.getX1() - line.getX2()) < 1E-9)
 			return line.getY1();
 		return line.getY1() + (line.getY2() - line.getY1()) * (x - line.getX1()) / (line.getX2() - line.getX1());
 	}
