@@ -1,0 +1,119 @@
+.background {
+    -fx-background-color: #1d1d1d;
+}
+
+.background_notimg {
+    -fx-background-color: #4E617F;
+}
+
+.page {
+     -fx-background-color: #0000;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-padding: 0;
+}
+
+.tab-pane {
+    -fx-tab-min-height: 32px;
+    -fx-tab-max-height: 32px;
+    -fx-tab-max-width: 32px;
+    -fx-tab-min-width: 32px;
+}
+
+.tab-pane .tab {
+   -fx-background-color: #2B2B2B;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #15476E;
+}
+
+.tab-label {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 50%;
+    -fx-background-position: 25%;
+    -fx-rotate: 90;
+}
+
+.diary-button {
+    -fx-background-color: #FFF0;
+    -fx-font: 25px "Tahoma";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.diary-button:hover {
+    -fx-background-color: #FFF1;
+}
+
+.grid-textField {
+    -fx-background-color: #FFF4;
+    -fx-font: 20px "Tahoma";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+.grid-textField:hover {
+    -fx-background-color: #C0F5FB60;
+}
+.grid-textField:disabled {
+    -fx-background-color: #5555;
+}
+
+.grid-checkbox {
+    -fx-font: 25px "Tahoma";
+    -fx-text-fill: white;
+}
+
+.grid-label {
+    -fx-background-color: #FFF3;
+    -fx-font: 25px "Tahoma";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+.grid-label:hover {
+    -fx-background-color: #C0F5FB40;
+}
+
+.grid-label-delay {
+    -fx-background-color: #FFF4;
+}
+.grid-label-delay:hover {
+    -fx-background-color: #C0F5FB50;
+}
+
+.grid-label-today {
+    -fx-background-color: #F007;
+}
+.grid-label-today:hover {
+    -fx-background-color: #F008;
+}
+
+.delay {
+    -fx-background-color: #C0F5FB02;
+}
+
+.delay .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #FFF2;
+}
+
+.delay .list-cell {
+    -fx-font: 32px Georgia;
+    -fx-text-fill: white;
+}
+
+.delay .list-cell:odd {
+    -fx-background-color: #C0F5FB02;
+}
+.delay .list-cell:even {
+    -fx-background-color: #C0F5FB02;
+}
+.delay .list-cell:filled:hover {
+    -fx-background-color: #FFF2;
+}
