@@ -15,6 +15,9 @@ void Hafman::Compress(string input, string output)
 	ifs.seekg(0, ios::end);
 	long size = (long)ifs.tellg();
 	ifs.seekg(0, 0);
+	
+	if (!size)
+		throw "File is empty";
 
 	char* data = new char[size];
 	ifs.read(data, size);
