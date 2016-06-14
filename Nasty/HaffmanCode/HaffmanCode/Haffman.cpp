@@ -15,7 +15,7 @@ void Hafman::Compress(string input, string output)
 	ifs.seekg(0, ios::end);
 	long size = (long)ifs.tellg();
 	ifs.seekg(0, 0);
-	
+
 	if (!size)
 		throw "File is empty";
 
@@ -54,7 +54,11 @@ void Hafman::Compress(string input, string output)
 	}
 
 	ofs.write(&offest, 1);
-	ofs.write(result, j+1);
+	ofs.write(result, j + 1);
+
+	float p = (float)size / ofs.tellp();
+	cout << size / 1024 << "KB -> " << ofs.tellp()/1024 << "KB (x" << p << ")" << endl;
+
 	ofs.close();
 
 	delete[] result;
@@ -114,6 +118,10 @@ void Hafman::Decompress(string input, string output)
 
 	ofstream ofs(output.c_str(), ios_base::binary);
 	ofs.write(result, j);
+
+	float p = (float)size / ofs.tellp();
+	cout << size / 1024 << "KB -> " << ofs.tellp() / 1024 << "KB (x" << p << ")" << endl;
+
 	ofs.close();
 
 	delete[] result;
