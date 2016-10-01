@@ -1,9 +1,7 @@
 import java.awt.event.ActionEvent;
-import java.util.List;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.Timer;
 
@@ -13,13 +11,11 @@ public class NewJFrame extends javax.swing.JFrame
     private final javax.swing.DefaultListModel listmodel;
     private BufferedImage image;                    // Картинка активной мухи
     private BufferedImage image_disable;            // Картинка не активной мухи
-    private final List<fly> LC;                     // Список для хранения созданных Тараканов
     private final Timer activeTimer;                // Таймер для исполнения комманд
     private int AlgStep = 0;
     
     public NewJFrame() {
         listmodel = new javax.swing.DefaultListModel();
-        LC = new ArrayList<>();
         
         //Грузит картинки
         try {
@@ -42,7 +38,7 @@ public class NewJFrame extends javax.swing.JFrame
             jList1.setSelectedIndex(AlgStep);
             String cmd = jList1.getSelectedValue().toString();
 
-            LC.stream().forEach(f -> f.Eval(cmd));  //Вызовит Eval для каждой мухи
+            fly.Instances.stream().forEach(f -> f.Eval(cmd));  //Вызовит Eval для каждой мухи
             
             AlgStep++;
         }
@@ -248,14 +244,14 @@ public class NewJFrame extends javax.swing.JFrame
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        LC.add(new fly(jPanel1, image, image_disable));
+        fly.Instances.add(new fly(jPanel1, image, image_disable));
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         AlgStep = 0;
         activeTimer.start();
     }//GEN-LAST:event_jButton9ActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */

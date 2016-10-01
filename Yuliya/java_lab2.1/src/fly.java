@@ -1,16 +1,19 @@
-
+import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class fly implements MouseListener
 {
-    private static final int step = 30;
+    public static List<fly> Instances = new ArrayList<>(); // Список для хранения созданных Тараканов
+    private static final int step = 60;
     private final BufferedImage Image;
     private final BufferedImage Image_disable;
     private final JLabel label;
@@ -46,10 +49,10 @@ public class fly implements MouseListener
                 Step();
                 break;
             case "PenDown":
-                isActivePero = false;
+                isActivePero = true;
                 break;
             case "PenUp":
-                isActivePero = true;
+                isActivePero = false;
                 break;
             default:
                 ChangeTrend(command);
@@ -60,6 +63,9 @@ public class fly implements MouseListener
     //Выполнение шага в заданном направлении
     public void Step()
     {
+        int oldX = X;
+        int oldY = Y;
+        
         switch (trend)
         {
             case "Right": X += step; break;
@@ -67,7 +73,15 @@ public class fly implements MouseListener
             case "Left": X -= step; break;
             case "Up": Y -= step; break;
         }
-        label.setBounds(X, Y, Image.getWidth(), Image.getHeight());
+        label.setLocation(X, Y);
+        
+        if(isActivePero)
+        {
+            label.getParent().getGraphics().fillRect(
+                    oldX - 3 - step/2,
+                    oldY - 3 + step/2,
+                    6, 6);
+        }
     }
 
     public void ChangeTrend(String c)
@@ -104,9 +118,13 @@ public class fly implements MouseListener
     //Клик по мухе, меняем состояние
     @Override
     public void mouseClicked(MouseEvent e) {
-        setActive(!isActive());
+        if((e.getModifiers() & InputEvent.SHIFT_MASK) != 0) //Если зажат шифт
+            Instances.stream().forEach(f->f.setActive(true));   //Будим всех мух
+        else
+            setActive(!isActive()); // меняем состояние
     }
 
+    
     // Заглушки, интерфейс (MouseListener) должен быть реализован полностью
     
     @Override
