@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\admin\Documents\Xilinxs\LR1\LR1_TOP.ncd
+OUTFILE=C:\Users\admin\Documents\Xilinxs\LR1\LR1_TOP.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\admin\Documents\Xilinxs\LR1
+LICENSE=WebPack
+USER_INFO=__0_0_0

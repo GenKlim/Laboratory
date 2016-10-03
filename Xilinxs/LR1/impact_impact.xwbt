@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\admin\Documents\Xilinxs\LR1\impact.xsl
+OUTFILE=C:\Users\admin\Documents\Xilinxs\LR1\impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=C:\Users\admin\Documents\Xilinxs\LR1
+LICENSE=iMPACT
+USER_INFO=iMPACT

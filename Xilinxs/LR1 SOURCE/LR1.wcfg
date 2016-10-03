@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/PRJ/LR1/LR1_TB_TOP_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="LR1_TB_TOP" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="/LR1_TB_TOP/SW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW[11:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LR1_TB_TOP/X" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">X[3:0]</obj_property>
+      <obj_property name="ObjectShortName">X[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LR1_TB_TOP/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[11:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

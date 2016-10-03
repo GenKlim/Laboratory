@@ -1,0 +1,6 @@
+verilog work "LR1_KNF.v"
+verilog work "LR1_DNF.vf"
+verilog work "LR1_BEH.v"
+verilog work "LR1_TOP.v"
+verilog work "LR1_TB.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

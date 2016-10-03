@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim LR1_TOP.ngc LR1_TOP_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim LR1_TOP.ngc LR1_TOP_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 LR1_TOP.ngc LR1_TOP.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o LR1_TOP_map.ncd LR1_TOP.ngd LR1_TOP.pcf 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.xst" -ofn "C:/Users/admin/Documents/Xilinxs/LR1/LR1_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LR1_TOP.ucf -p xc7a100t-csg324-3 LR1_TOP.ngc LR1_TOP.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o LR1_TOP_map.ncd LR1_TOP.ngd LR1_TOP.pcf 
+par -w -intstyle ise -ol high -mt off LR1_TOP_map.ncd LR1_TOP.ncd LR1_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LR1_TOP.twx LR1_TOP.ncd -o LR1_TOP.twr LR1_TOP.pcf -ucf LR1_TOP.ucf 
+bitgen -intstyle ise -f LR1_TOP.ut LR1_TOP.ncd 

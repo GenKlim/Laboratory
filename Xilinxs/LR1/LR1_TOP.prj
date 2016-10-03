@@ -1,0 +1,4 @@
+verilog work "LR1_KNF.v"
+verilog work "LR1_DNF.vf"
+verilog work "LR1_BEH.v"
+verilog work "LR1_TOP.v"
