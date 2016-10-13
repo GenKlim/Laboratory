@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_K/TOP.v} -lang verilog -prj LR1_K -o TOP.spl -module TOP -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 TOP.spl {C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_K/TOP.sym} 
+xst -intstyle ise -ifn "C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_K/TOP.xst" -ofn "C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_K/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "TOP.ngc" TOP.ngd  

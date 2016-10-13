@@ -1,0 +1,6 @@
+verilog isim_temp "KNF.v"
+verilog isim_temp "DNF.vf"
+verilog isim_temp "BEH.v"
+verilog isim_temp "TOP.v"
+verilog isim_temp "Test_top.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

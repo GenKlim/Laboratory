@@ -1,0 +1,40 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 TOP.ngc TOP.ngd
+
+Reading NGO file "C:/Users/admin/Documents/Visual Studio
+2015/Projects/Laboratory/Xilinxs/LR1_K/TOP.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+ERROR:NgdBuild:604 - logical block 'CL2' with type 'KNF' could not be resolved.
+   A pin name misspelling can cause this, a missing edif or ngc file, case
+   mismatch between the block name and the edif or ngc file name, or the
+   misspelling of a type name. Symbol 'KNF' is not supported in target 'artix7'.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     1
+  Number of warnings:   0
+
+Total memory usage is 177612 kilobytes
+
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "TOP.bld"...

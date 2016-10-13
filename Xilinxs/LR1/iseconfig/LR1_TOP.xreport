@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-03T11:44:01</DateModified>
+  <DateModified>2016-10-12T14:53:09</DateModified>
   <ModuleName>LR1_TOP</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/admin/Documents/Xilinxs/LR1/iseconfig/LR1_TOP.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/admin/Documents/Xilinxs/LR1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1/iseconfig/LR1_TOP.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1\</ImplementationReportsDirectory>
   <DateInitialized>2016-09-18T20:20:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

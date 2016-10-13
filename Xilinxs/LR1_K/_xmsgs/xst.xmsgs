@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v" Line 8: Port <arg fmt="%s" index="1">X0</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\KNF.v" Line 3: Empty module &lt;<arg fmt="%s" index="1">KNF</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v" Line 8: Input port <arg fmt="%s" index="1">X0</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SW&lt;3:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v</arg>&quot; line <arg fmt="%s" index="2">8</arg>: Output port &lt;<arg fmt="%s" index="3">Y0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">CL1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v</arg>&quot; line <arg fmt="%s" index="2">8</arg>: Output port &lt;<arg fmt="%s" index="3">Y1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">CL1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v</arg>&quot; line <arg fmt="%s" index="2">8</arg>: Output port &lt;<arg fmt="%s" index="3">Y2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">CL1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\LR1_K\TOP.v</arg>&quot; line <arg fmt="%s" index="2">8</arg>: Output port &lt;<arg fmt="%s" index="3">Y3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">CL1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_Y</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">LED&lt;7&gt;</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">KNF</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">LED&lt;6&gt;</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">KNF</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">LED&lt;5&gt;</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">KNF</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">LED&lt;4&gt;</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">KNF</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+</messages>
+

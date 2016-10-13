@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_Allyamov/TEST_isim_beh.exe" -prj "C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR1_Allyamov/TEST_beh.prj" "work.TEST" "work.glbl" 
