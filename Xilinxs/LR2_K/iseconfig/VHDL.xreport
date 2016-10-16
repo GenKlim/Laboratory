@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-13T13:56:28</DateModified>
+  <DateModified>2016-10-15T00:56:35</DateModified>
   <ModuleName>VHDL</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR2_K/iseconfig/VHDL.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR2_K</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR2_K\</ImplementationReportsDirectory>
   <DateInitialized>2016-10-13T13:56:28</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
