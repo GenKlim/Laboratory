@@ -1,0 +1,4 @@
+verilog work "KNF.v"
+verilog work "DNF.vf"
+verilog work "BEH.v"
+verilog work "TOP.v"
