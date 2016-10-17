@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+top instance_name (
+    .CLK(CLK), 
+    .RST(RST), 
+    .CNT_O(CNT_O), 
+    .VAR_O(VAR_O)
+    );
+
+

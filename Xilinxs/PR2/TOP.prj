@@ -1,0 +1,4 @@
+verilog work "BEH.v"
+verilog work "ToDysplay.v"
+verilog work "GetValueBit.v"
+verilog work "TOP.v"

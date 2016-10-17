@@ -1,0 +1,7 @@
+[Inputs]
+CLK
+RST
+[Outputs]
+=CNT_O[3:0]=
+=VAR_O[3:0]=
+[BiDir]

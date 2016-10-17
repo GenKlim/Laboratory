@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/PR2/TEST_TOP_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TEST_TOP" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/TEST_TOP/AN0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AN0</obj_property>
+      <obj_property name="ObjectShortName">AN0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/AN1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AN1</obj_property>
+      <obj_property name="ObjectShortName">AN1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/LED0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LED0</obj_property>
+      <obj_property name="ObjectShortName">LED0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/BTNC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTNC</obj_property>
+      <obj_property name="ObjectShortName">BTNC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/BTNR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTNR</obj_property>
+      <obj_property name="ObjectShortName">BTNR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/SWG_BUFF" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SWG_BUFF[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SWG_BUFF[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/ADDRESS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ADDRESS[5:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESS[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/VALUE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VALUE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VALUE[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/STATE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">STATE</obj_property>
+      <obj_property name="ObjectShortName">STATE</obj_property>
+   </wvobject>
+</wave_config>
