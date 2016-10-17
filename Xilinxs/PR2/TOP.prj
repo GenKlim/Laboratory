@@ -1,4 +1,4 @@
-verilog work "BEH.v"
+verilog work "ToValue.v"
 verilog work "ToDysplay.v"
-verilog work "GetValueBit.v"
+verilog work "ButtonFilter.v"
 verilog work "TOP.v"

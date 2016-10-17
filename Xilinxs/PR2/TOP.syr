@@ -105,12 +105,12 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\BEH.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ToValue.v" into library work
 Parsing module <ToValue>.
 Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ToDysplay.v" into library work
 Parsing module <ToDysplay>.
-Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\GetValueBit.v" into library work
-Parsing module <GetValueBit>.
+Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ButtonFilter.v" into library work
+Parsing module <ButtonFilter>.
 Analyzing Verilog file "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\TOP.v" into library work
 Parsing module <TOP>.
 
@@ -119,13 +119,12 @@ Parsing module <TOP>.
 =========================================================================
 
 Elaborating module <TOP>.
-WARNING:HDLCompiler:413 - "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\TOP.v" Line 23: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\TOP.v" Line 29: Result of 7-bit expression is truncated to fit in 6-bit target.
 
-Elaborating module <GetValueBit>.
+Elaborating module <ButtonFilter>.
+WARNING:HDLCompiler:413 - "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ButtonFilter.v" Line 21: Result of 13-bit expression is truncated to fit in 12-bit target.
 
 Elaborating module <ToValue>.
-WARNING:HDLCompiler:91 - "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\GetValueBit.v" Line 15: Signal <VALUE> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\GetValueBit.v" Line 15: Result of 4-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <ToDysplay>.
 
@@ -135,33 +134,33 @@ Elaborating module <ToDysplay>.
 
 Synthesizing Unit <TOP>.
     Related source file is "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\TOP.v".
-    Found 1-bit register for signal <AN1>.
-    Found 4-bit register for signal <SWG_BUFF>.
     Found 1-bit register for signal <STATE>.
+    Found 6-bit register for signal <ADDRESS>.
+    Found 1-bit register for signal <LED0>.
     Found 1-bit register for signal <AN0>.
-    Found 6-bit adder for signal <ADDRESS[5]_GND_1_o_add_0_OUT> created at line 23.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ADDRESS<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <AN1>.
+    Found 4-bit register for signal <SEG_BUFF>.
+    Found 6-bit adder for signal <ADDRESS[5]_GND_1_o_add_0_OUT> created at line 29.
+    Found 1-bit 4-to-1 multiplexer for signal <ADDRESS[1]_VALUE[3]_Mux_2_o> created at line 32.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   7 D-type flip-flop(s).
-	inferred   6 Latch(s).
-	inferred   1 Multiplexer(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 Unit <TOP> synthesized.
 
-Synthesizing Unit <GetValueBit>.
-    Related source file is "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\GetValueBit.v".
-    Found 4-bit shifter logical left for signal <GND_8_o_X[1]_shift_left_0_OUT> created at line 15
+Synthesizing Unit <ButtonFilter>.
+    Related source file is "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ButtonFilter.v".
+    Found 12-bit register for signal <counter>.
+    Found 1-bit register for signal <SET>.
+    Found 1-bit register for signal <Enable>.
+    Found 12-bit adder for signal <counter[11]_GND_2_o_add_1_OUT> created at line 21.
     Summary:
-	inferred   1 Combinational logic shifter(s).
-Unit <GetValueBit> synthesized.
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+Unit <ButtonFilter> synthesized.
 
 Synthesizing Unit <ToValue>.
-    Related source file is "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\BEH.v".
+    Related source file is "C:\Users\admin\Documents\Visual Studio 2015\Projects\Laboratory\Xilinxs\PR2\ToValue.v".
     Found 16x4-bit Read Only RAM for signal <Y>
     Summary:
 	inferred   1 RAM(s).
@@ -177,19 +176,19 @@ Unit <ToDysplay> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 16x4-bit single-port Read Only RAM                    : 2
-# Adders/Subtractors                                   : 1
+# RAMs                                                 : 1
+ 16x4-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 2
+ 12-bit adder                                          : 1
  6-bit adder                                           : 1
-# Registers                                            : 4
- 1-bit register                                        : 3
+# Registers                                            : 9
+ 1-bit register                                        : 6
+ 12-bit register                                       : 1
  4-bit register                                        : 1
-# Latches                                              : 6
- 1-bit latch                                           : 6
-# Multiplexers                                         : 1
+ 6-bit register                                        : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
  4-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 1
- 4-bit shifter logical left                            : 1
 
 =========================================================================
 
@@ -198,8 +197,16 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <ButtonFilter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ButtonFilter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TOP>.
+The following registers are absorbed into counter <ADDRESS>: 1 register on signal <ADDRESS>.
+Unit <TOP> synthesized (advanced).
+
 Synthesizing (advanced) Unit <ToValue>.
-INFO:Xst:3231 - The small RAM <Mram_Y> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Y> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -216,25 +223,26 @@ Unit <ToValue> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 16x4-bit single-port distributed Read Only RAM        : 2
-# Adders/Subtractors                                   : 1
- 6-bit adder                                           : 1
-# Registers                                            : 7
- Flip-Flops                                            : 7
-# Multiplexers                                         : 1
+# RAMs                                                 : 1
+ 16x4-bit single-port distributed Read Only RAM        : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
  4-bit 2-to-1 multiplexer                              : 1
-# Logic shifters                                       : 1
- 4-bit shifter logical left                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <STATE> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <AN0> 
 
 Optimizing unit <TOP> ...
+
+Optimizing unit <ButtonFilter> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -246,8 +254,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 6
- Flip-Flops                                            : 6
+# Registers                                            : 28
+ Flip-Flops                                            : 28
 
 =========================================================================
 
@@ -270,18 +278,25 @@ Top Level Output File Name         : TOP.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 20
-#      INV                         : 2
-#      LUT2                        : 2
-#      LUT3                        : 1
-#      LUT4                        : 8
+# BELS                             : 62
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 11
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT4                        : 9
 #      LUT5                        : 5
-#      LUT6                        : 2
-# FlipFlops/Latches                : 12
-#      FDE                         : 6
-#      LDC                         : 6
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+#      LUT6                        : 4
+#      MUXCY                       : 11
+#      VCC                         : 1
+#      XORCY                       : 12
+# FlipFlops/Latches                : 28
+#      FD                          : 1
+#      FDC                         : 1
+#      FDCE                        : 6
+#      FDE                         : 7
+#      FDR                         : 13
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 12
 #      IBUF                        : 2
@@ -294,23 +309,23 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              12  out of  126800     0%  
- Number of Slice LUTs:                   20  out of  63400     0%  
-    Number used as Logic:                20  out of  63400     0%  
+ Number of Slice Registers:              28  out of  126800     0%  
+ Number of Slice LUTs:                   37  out of  63400     0%  
+    Number used as Logic:                37  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     21
-   Number with an unused Flip Flop:       9  out of     21    42%  
-   Number with an unused LUT:             1  out of     21     4%  
-   Number of fully used LUT-FF pairs:    11  out of     21    52%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:     38
+   Number with an unused Flip Flop:      10  out of     38    26%  
+   Number with an unused LUT:             1  out of     38     2%  
+   Number of fully used LUT-FF pairs:    27  out of     38    71%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          13
  Number of bonded IOBs:                  13  out of    210     6%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -333,8 +348,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 6     |
-BTNC                               | IBUF+BUFG              | 6     |
+CLK                                | BUFGP                  | 28    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -345,9 +359,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.289ns (Maximum Frequency: 775.555MHz)
-   Minimum input arrival time before clock: 0.903ns
-   Maximum output required time after clock: 1.570ns
+   Minimum period: 1.719ns (Maximum Frequency: 581.903MHz)
+   Minimum input arrival time before clock: 1.082ns
+   Maximum output required time after clock: 1.322ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -356,160 +370,102 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 1.069ns (frequency: 935.804MHz)
-  Total number of paths / destination ports: 6 / 6
+  Clock period: 1.719ns (frequency: 581.903MHz)
+  Total number of paths / destination ports: 160 / 34
 -------------------------------------------------------------------------
-Delay:               1.069ns (Levels of Logic = 1)
-  Source:            STATE (FF)
-  Destination:       STATE (FF)
+Delay:               1.719ns (Levels of Logic = 13)
+  Source:            CL1/counter_0 (FF)
+  Destination:       CL1/counter_11 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: STATE to STATE
+  Data Path: CL1/counter_0 to CL1/counter_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.361   0.307  STATE (STATE)
-     INV:I->O              1   0.113   0.279  STATE_INV_1_o1_INV_0 (STATE_INV_1_o)
-     FDE:D                     0.008          STATE
+     FDR:C->Q              2   0.361   0.283  CL1/counter_0 (CL1/counter_0)
+     INV:I->O              1   0.113   0.000  CL1/Mcount_counter_lut<0>_INV_0 (CL1/Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  CL1/Mcount_counter_cy<0> (CL1/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<1> (CL1/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<2> (CL1/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<3> (CL1/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<4> (CL1/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<5> (CL1/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<6> (CL1/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<7> (CL1/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<8> (CL1/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  CL1/Mcount_counter_cy<9> (CL1/Mcount_counter_cy<9>)
+     MUXCY:CI->O           0   0.023   0.000  CL1/Mcount_counter_cy<10> (CL1/Mcount_counter_cy<10>)
+     XORCY:CI->O           1   0.370   0.000  CL1/Mcount_counter_xor<11> (CL1/Result<11>)
+     FDR:D                     0.008          CL1/counter_11
     ----------------------------------------
-    Total                      1.069ns (0.482ns logic, 0.587ns route)
-                                       (45.1% logic, 54.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'BTNC'
-  Clock period: 1.289ns (frequency: 775.555MHz)
-  Total number of paths / destination ports: 21 / 6
--------------------------------------------------------------------------
-Delay:               1.289ns (Levels of Logic = 1)
-  Source:            ADDRESS_2 (LATCH)
-  Destination:       ADDRESS_4 (LATCH)
-  Source Clock:      BTNC falling
-  Destination Clock: BTNC falling
-
-  Data Path: ADDRESS_2 to ADDRESS_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q              9   0.472   0.720  ADDRESS_2 (ADDRESS_2)
-     LUT5:I0->O            1   0.097   0.000  ADDRESS[5]_GND_1_o_add_0_OUT<4>1 (ADDRESS[5]_GND_1_o_add_0_OUT<4>)
-     LDC:D                    -0.028          ADDRESS_4
-    ----------------------------------------
-    Total                      1.289ns (0.569ns logic, 0.720ns route)
-                                       (44.1% logic, 55.9% route)
+    Total                      1.719ns (1.435ns logic, 0.283ns route)
+                                       (83.5% logic, 16.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 12 / 6
+  Total number of paths / destination ports: 28 / 28
 -------------------------------------------------------------------------
-Offset:              0.903ns (Levels of Logic = 2)
-  Source:            BTNR (PAD)
-  Destination:       STATE (FF)
+Offset:              1.082ns (Levels of Logic = 2)
+  Source:            BTNC (PAD)
+  Destination:       CL1/counter_11 (FF)
   Destination Clock: CLK rising
 
-  Data Path: BTNR to STATE
+  Data Path: BTNC to CL1/counter_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   0.001   0.407  BTNR_IBUF (BTNR_IBUF)
-     LUT2:I0->O            6   0.097   0.302  _n0038_inv1 (_n0038_inv)
-     FDE:CE                    0.095          STATE
+     IBUF:I->O             2   0.001   0.283  BTNC_IBUF (BTNC_IBUF)
+     INV:I->O             13   0.113   0.335  CL1/State_inv1_INV_0 (CL1/State_inv)
+     FDR:R                     0.349          CL1/counter_0
     ----------------------------------------
-    Total                      0.903ns (0.193ns logic, 0.710ns route)
-                                       (21.4% logic, 78.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'BTNC'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              0.657ns (Levels of Logic = 1)
-  Source:            BTNR (PAD)
-  Destination:       ADDRESS_4 (LATCH)
-  Destination Clock: BTNC falling
-
-  Data Path: BTNR to ADDRESS_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             7   0.001   0.307  BTNR_IBUF (BTNR_IBUF)
-     LDC:CLR                   0.349          ADDRESS_4
-    ----------------------------------------
-    Total                      0.657ns (0.350ns logic, 0.307ns route)
-                                       (53.2% logic, 46.8% route)
+    Total                      1.082ns (0.463ns logic, 0.619ns route)
+                                       (42.8% logic, 57.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 30 / 9
+  Total number of paths / destination ports: 31 / 10
 -------------------------------------------------------------------------
 Offset:              1.322ns (Levels of Logic = 2)
-  Source:            SWG_BUFF_2 (FF)
-  Destination:       SWG<6> (PAD)
+  Source:            SEG_BUFF_3 (FF)
+  Destination:       SEG<6> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: SWG_BUFF_2 to SWG<6>
+  Data Path: SEG_BUFF_3 to SEG<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.361   0.584  SWG_BUFF_2 (SWG_BUFF_2)
-     LUT4:I0->O            1   0.097   0.279  CL3/Y<0>1 (SWG_0_OBUF)
-     OBUF:I->O                 0.000          SWG_0_OBUF (SWG<0>)
+     FDE:C->Q              7   0.361   0.584  SEG_BUFF_3 (SEG_BUFF_3)
+     LUT4:I0->O            1   0.097   0.279  CL3/Y<2>1 (SEG_2_OBUF)
+     OBUF:I->O                 0.000          SEG_2_OBUF (SEG<2>)
     ----------------------------------------
     Total                      1.322ns (0.458ns logic, 0.864ns route)
                                        (34.7% logic, 65.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'BTNC'
-  Total number of paths / destination ports: 6 / 1
--------------------------------------------------------------------------
-Offset:              1.570ns (Levels of Logic = 2)
-  Source:            ADDRESS_0 (LATCH)
-  Destination:       LED0 (PAD)
-  Source Clock:      BTNC falling
-
-  Data Path: ADDRESS_0 to LED0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q              7   0.472   0.721  ADDRESS_0 (ADDRESS_0)
-     LUT6:I0->O            1   0.097   0.279  LED01 (LED0_OBUF)
-     OBUF:I->O                 0.000          LED0_OBUF (LED0)
-    ----------------------------------------
-    Total                      1.570ns (0.569ns logic, 1.001ns route)
-                                       (36.3% logic, 63.7% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock BTNC
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-BTNC           |         |         |    1.289|         |
----------------+---------+---------+---------+---------+
-
 Clock to Setup on destination clock CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-BTNC           |         |    1.297|         |         |
-CLK            |    1.069|         |         |         |
+CLK            |    1.719|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.13 secs
+Total CPU time to Xst completion: 9.17 secs
  
 --> 
 
 Total memory usage is 413312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

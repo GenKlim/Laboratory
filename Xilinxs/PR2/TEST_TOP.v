@@ -6,7 +6,7 @@ module TEST_TOP;
 	reg BTNC;
 	reg BTNR;
 
-	wire [6:0] SWG;
+	wire [6:0] SEG;
 	wire AN0;
 	wire AN1;
 	wire LED0;
@@ -15,7 +15,7 @@ module TEST_TOP;
 		.CLK(CLK), 
 		.BTNC(BTNC), 
 		.BTNR(BTNR), 
-		.SWG(SWG), 
+		.SEG(SEG), 
 		.AN0(AN0), 
 		.AN1(AN1), 
 		.LED0(LED0)
@@ -33,8 +33,22 @@ module TEST_TOP;
 		
 		repeat (16) begin
 			repeat (4) begin
-				BTNC = 1; #50;
-				BTNC = 0; #150;
+				BTNC = 1; #10;
+				BTNC = 0; #50;
+				BTNC = 1; #250;
+				BTNC = 0; #80;
+				BTNC = 1; #20;
+				BTNC = 0; #170;
+							  
+				BTNC = 1; #1000000;
+				BTNC = 0; #120;
+				
+				BTNC = 1; #10;
+				BTNC = 0; #50;
+				BTNC = 1; #250;
+				BTNC = 0; #80;
+				BTNC = 1; #20;
+				BTNC = 0; #170;
 			end
 		end
 	end

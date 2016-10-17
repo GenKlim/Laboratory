@@ -22,6 +22,46 @@
    <wvobject fp_name="/TEST_TOP/LED0" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">LED0</obj_property>
       <obj_property name="ObjectShortName">LED0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/ADDRESS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ADDRESS[5:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESS[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/VALUE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VALUE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VALUE[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TEST_TOP/uut/VALUE[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">VALUE[3]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TEST_TOP/uut/VALUE[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">VALUE[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TEST_TOP/uut/VALUE[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">VALUE[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TEST_TOP/uut/VALUE[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">VALUE[0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/STATE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">STATE</obj_property>
+      <obj_property name="ObjectShortName">STATE</obj_property>
    </wvobject>
    <wvobject fp_name="/TEST_TOP/CLK" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">CLK</obj_property>
@@ -35,23 +75,8 @@
       <obj_property name="ElementShortName">BTNR</obj_property>
       <obj_property name="ObjectShortName">BTNR</obj_property>
    </wvobject>
-   <wvobject fp_name="/TEST_TOP/uut/SWG_BUFF" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">SWG_BUFF[3:0]</obj_property>
-      <obj_property name="ObjectShortName">SWG_BUFF[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TEST_TOP/uut/ADDRESS" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">ADDRESS[5:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDRESS[5:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TEST_TOP/uut/VALUE" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">VALUE[3:0]</obj_property>
-      <obj_property name="ObjectShortName">VALUE[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TEST_TOP/uut/STATE" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">STATE</obj_property>
-      <obj_property name="ObjectShortName">STATE</obj_property>
+   <wvobject fp_name="/TEST_TOP/uut/BTNC_F" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTNC_F</obj_property>
+      <obj_property name="ObjectShortName">BTNC_F</obj_property>
    </wvobject>
 </wave_config>
