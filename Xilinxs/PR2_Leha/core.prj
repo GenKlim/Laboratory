@@ -1,0 +1,4 @@
+verilog work "reg_16x4.v"
+verilog work "multiplexer4.v"
+verilog work "ctr64.v"
+verilog work "core.v"

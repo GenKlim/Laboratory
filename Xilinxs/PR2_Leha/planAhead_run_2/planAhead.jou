@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:24:55 MDT 2013
+# Start of session at: Mon Oct 31 02:54:30 2016
+# Process ID: 6234
+# Log file: /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/planAhead_run_2/planAhead.log
+# Journal file: /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/pa.fromNetlist.tcl
+close_design

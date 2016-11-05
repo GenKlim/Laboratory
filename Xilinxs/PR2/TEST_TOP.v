@@ -16,8 +16,7 @@ module TEST_TOP;
 		.BTNC(BTNC), 
 		.BTNR(BTNR), 
 		.SEG(SEG), 
-		.AN0(AN0), 
-		.AN1(AN1), 
+		.AN(AN),  
 		.LED0(LED0)
 	);
 
@@ -40,7 +39,7 @@ module TEST_TOP;
 				BTNC = 1; #20;
 				BTNC = 0; #170;
 							  
-				BTNC = 1; #1000000;
+				BTNC = 1; #300000;
 				BTNC = 0; #120;
 				
 				BTNC = 1; #10;

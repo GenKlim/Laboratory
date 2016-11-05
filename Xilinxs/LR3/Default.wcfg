@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/LR3/Test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/Test/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/WE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WE</obj_property>
+      <obj_property name="ObjectShortName">WE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/OE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OE</obj_property>
+      <obj_property name="ObjectShortName">OE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/T" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">T[3:0]</obj_property>
+      <obj_property name="ObjectShortName">T[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#c0c0c0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/STATE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">STATE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">STATE[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#c0c0c0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/OUTPUT_RG" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OUTPUT_RG[3:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT_RG[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/OUTPUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OUTPUT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/TIMER" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">TIMER[3:0]</obj_property>
+      <obj_property name="ObjectShortName">TIMER[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#c0c0c0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/DB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DB[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/IRQ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IRQ</obj_property>
+      <obj_property name="ObjectShortName">IRQ</obj_property>
+   </wvobject>
+</wave_config>

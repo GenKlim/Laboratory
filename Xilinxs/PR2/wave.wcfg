@@ -3,21 +3,18 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/PR2/TEST_TOP_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/admin/Documents/Visual Studio 2015/Projects/Laboratory/Xilinxs/PR2/TEST_TOP_isim_beh1.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="TEST_TOP" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="10" />
-   <wvobject fp_name="/TEST_TOP/AN0" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">AN0</obj_property>
-      <obj_property name="ObjectShortName">AN0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TEST_TOP/AN1" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">AN1</obj_property>
-      <obj_property name="ObjectShortName">AN1</obj_property>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/TEST_TOP/uut/AN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AN[2:0]</obj_property>
+      <obj_property name="ObjectShortName">AN[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TEST_TOP/LED0" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">LED0</obj_property>
@@ -26,9 +23,11 @@
       <obj_property name="CustomSignalColor">#0000ff</obj_property>
    </wvobject>
    <wvobject fp_name="/TEST_TOP/uut/ADDRESS" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">ADDRESS[5:0]</obj_property>
       <obj_property name="ObjectShortName">ADDRESS[5:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">ADDRESS[5:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/TEST_TOP/uut/VALUE" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">VALUE[3:0]</obj_property>
@@ -59,9 +58,19 @@
          <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/TEST_TOP/uut/STATE" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">STATE</obj_property>
-      <obj_property name="ObjectShortName">STATE</obj_property>
+   <wvobject fp_name="/TEST_TOP/uut/STATE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">STATE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">STATE[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/SEG" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEG[6:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/SEG_BUFF" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEG_BUFF[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG_BUFF[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TEST_TOP/CLK" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">CLK</obj_property>
@@ -78,5 +87,26 @@
    <wvobject fp_name="/TEST_TOP/uut/BTNC_F" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">BTNC_F</obj_property>
       <obj_property name="ObjectShortName">BTNC_F</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/CL1/SET" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SET</obj_property>
+      <obj_property name="ObjectShortName">SET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/CL1/Enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Enable</obj_property>
+      <obj_property name="ObjectShortName">Enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/CL1/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/CL1/State" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">State</obj_property>
+      <obj_property name="ObjectShortName">State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_TOP/uut/UPDATE_TIMER" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">UPDATE_TIMER[2:0]</obj_property>
+      <obj_property name="ObjectShortName">UPDATE_TIMER[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

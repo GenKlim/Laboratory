@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:24:55 MDT 2013
+# Start of session at: Mon Oct 17 21:04:05 2016
+# Process ID: 27709
+# Log file: /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/planAhead_run_1/planAhead.log
+# Journal file: /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/ext4_tb/lin/moved/apcel/Documents/5sem/Xilinx/MAKSIMOV_LR2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

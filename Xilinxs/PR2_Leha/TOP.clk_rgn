@@ -1,0 +1,120 @@
+Release 14.7 - reportgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Oct 31 11:47:28 2016
+
+SUMMARY
+-------
+There are 8 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 5
+List of local clocks in this region:
+   LED/currentNumber/clk driven by SLICE_X78Y96 
+   CLICKfilter/currentState driven by SLICE_X78Y95 
+   CLICKfilter/filterDelay/filteredTick driven by SLICE_X78Y96 
+   LED/currentNumber/clockDivider/filteredTick driven by SLICE_X78Y96 
+   CLICKfilter/sigChanged driven by SLICE_X78Y96 
+
+Summary of components used in this region:
+
+Number of       IOB33M:     4 used out of    24    16%
+Number of       IOB33S:     7 used out of    24    29%
+Number of       SLICEL:    11 used out of  1250     1%
+Number of       SLICEM:    11 used out of   650     1%
+
+Clock Region X0Y2:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of       IOB33M:     1 used out of    24     4%
+Number of       IOB33S:     1 used out of    24     4%
+
+Clock Region X1Y2:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   clk_BUFGP driven by BUFGCTRL_X0Y31 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   RSTfilter/filterDelay/filteredTick driven by SLICE_X57Y104 
+   RSTfilter/sigChanged driven by SLICE_X57Y104 
+
+Summary of components used in this region:
+
+Number of       IOB33M:     1 used out of    24     4%
+Number of       SLICEL:     3 used out of  1250     1%
+Number of       SLICEM:     5 used out of   650     1%
+
+Clock Region X0Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+

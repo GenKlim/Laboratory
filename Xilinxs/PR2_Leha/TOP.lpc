@@ -1,0 +1,24 @@
+# TOP.lpc  
+#   The constraints in this file were created simply to be viewed.  
+#   If you wish to use these constraints, please copy them into your  
+#   project's constraint file. If you do not have a project constraints  
+#   file yet, please use the "Project->New Source" menu to create one.
+
+
+
+#pin2ucf - Mon Oct 31 03:19:22 2016
+#The following constraints were newly added
+NET "seg<0>" LOC = L3;
+NET "clk" LOC = E3;
+NET "seg<1>" LOC = N1;
+NET "seg<2>" LOC = L5;
+NET "seg<3>" LOC = L4;
+NET "seg<4>" LOC = K3;
+NET "seg<5>" LOC = M2;
+NET "seg<6>" LOC = L6;
+NET "btnC" LOC = E16;
+NET "an<0>" LOC = N6;
+NET "an<1>" LOC = M6;
+NET "an<2>" LOC = M3;
+NET "btnU" LOC = F15;
+NET "led<0>" LOC = T8;

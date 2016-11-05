@@ -1,0 +1,584 @@
+Release 14.7 - reportgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Oct 31 11:47:14 2016
+
+File: TOP.dly
+
+ The 20 worst nets by delay are:
++-----------------+-----------+
+| Max Delay       | Netname   |
++-----------------+-----------+
+   2.600            btnU_IBUF
+   2.358            btnC_IBUF
+   2.267            led_0_OBUF
+   1.863            an_0_OBUF
+   1.734            an_1_OBUF
+   1.538            seg_4_OBUF
+   1.525            clk_BUFGP/IBUFG
+   1.444            seg_0_OBUF
+   1.437            seg_5_OBUF
+   1.342            seg_1_OBUF
+   1.304            seg_3_OBUF
+   1.243            RSTfilter/currentState
+   1.239            an_2_OBUF
+   1.229            clk_BUFGP
+   1.192            seg_2_OBUF
+   1.190            seg_6_OBUF
+   1.108            CLICKfilter/currentState
+   0.937            LED/currentNumber/clockDivider/filteredTick
+   0.905            LED/currentNumber/clockDivider/internalCounter<14>
+   0.900            divideClock/clk_reg
+---------------------------------
+
+-------------------------------------------------------------------------------
+                               Net Delays
+-------------------------------------------------------------------------------
+
+CLICKfilter/currentState
+   CLICKfilter/currentState.AQ
+         0.354  CLICKfilter/runCounter_inv.D6
+         0.346  CLICKfilter/currentState.A4
+         0.841  core/counter/internalCounter<0>.CLK
+         1.108  core/counter/internalCounter<5>.CLK
+         0.841  core/counter/internalCounter<3>.CLK
+
+CLICKfilter/filterDelay/Mcount_internalCounter_cy<11>
+   CLICKfilter/filterDelay/internalCounter<11>.COUT
+         0.000  CLICKfilter/filterDelay/internalCounter<15>.CIN
+
+CLICKfilter/filterDelay/Mcount_internalCounter_cy<3>
+   CLICKfilter/filterDelay/internalCounter<3>.COUT
+         0.000  CLICKfilter/filterDelay/internalCounter<7>.CIN
+
+CLICKfilter/filterDelay/Mcount_internalCounter_cy<7>
+   CLICKfilter/filterDelay/internalCounter<7>.COUT
+         0.000  CLICKfilter/filterDelay/internalCounter<11>.CIN
+
+CLICKfilter/filterDelay/countedNeededValue<15>
+   CLICKfilter/filterDelay/countedNeededValue<15>.B
+         0.297  CLICKfilter/filterDelay/countedNeededValue<15>.A5
+
+CLICKfilter/filterDelay/countedNeededValue<15>1
+   CLICKfilter/filterDelay/countedNeededValue<15>.A
+         0.585  CLICKfilter/filterDelay/filteredTick.B5
+
+CLICKfilter/filterDelay/filteredTick
+   CLICKfilter/filterDelay/filteredTick.C
+         0.505  CLICKfilter/filterDelay/internalCounter<3>.CLK
+         0.464  CLICKfilter/filterDelay/internalCounter<7>.CLK
+         0.400  CLICKfilter/filterDelay/internalCounter<11>.CLK
+         0.572  CLICKfilter/filterDelay/internalCounter<15>.CLK
+
+CLICKfilter/filterDelay/internalCounter<0>
+   CLICKfilter/filterDelay/internalCounter<3>.AQ
+         0.373  CLICKfilter/filterDelay/internalCounter<3>.A4
+         0.461  CLICKfilter/filterDelay/countedNeededValue<15>.B2
+
+CLICKfilter/filterDelay/internalCounter<10>
+   CLICKfilter/filterDelay/internalCounter<11>.CQ
+         0.321  CLICKfilter/filterDelay/internalCounter<11>.C4
+         0.554  CLICKfilter/filterDelay/countedNeededValue<15>.A6
+
+CLICKfilter/filterDelay/internalCounter<11>
+   CLICKfilter/filterDelay/internalCounter<11>.DQ
+         0.382  CLICKfilter/filterDelay/internalCounter<11>.D4
+         0.625  CLICKfilter/filterDelay/filteredTick.B1
+
+CLICKfilter/filterDelay/internalCounter<12>
+   CLICKfilter/filterDelay/internalCounter<15>.AQ
+         0.373  CLICKfilter/filterDelay/internalCounter<15>.A4
+         0.420  CLICKfilter/filterDelay/filteredTick.B2
+
+CLICKfilter/filterDelay/internalCounter<13>
+   CLICKfilter/filterDelay/internalCounter<15>.BQ
+         0.322  CLICKfilter/filterDelay/internalCounter<15>.B4
+         0.541  CLICKfilter/filterDelay/filteredTick.B3
+
+CLICKfilter/filterDelay/internalCounter<14>
+   CLICKfilter/filterDelay/internalCounter<15>.CQ
+         0.321  CLICKfilter/filterDelay/internalCounter<15>.C4
+         0.719  CLICKfilter/filterDelay/filteredTick.B4
+
+CLICKfilter/filterDelay/internalCounter<15>
+   CLICKfilter/filterDelay/internalCounter<15>.DQ
+         0.337  CLICKfilter/filterDelay/internalCounter<15>.D4
+         0.334  CLICKfilter/filterDelay/filteredTick.B6
+
+CLICKfilter/filterDelay/internalCounter<1>
+   CLICKfilter/filterDelay/internalCounter<3>.BQ
+         0.322  CLICKfilter/filterDelay/internalCounter<3>.B4
+         0.596  CLICKfilter/filterDelay/countedNeededValue<15>.B1
+
+CLICKfilter/filterDelay/internalCounter<2>
+   CLICKfilter/filterDelay/internalCounter<3>.CQ
+         0.321  CLICKfilter/filterDelay/internalCounter<3>.C4
+         0.205  CLICKfilter/filterDelay/countedNeededValue<15>.B3
+
+CLICKfilter/filterDelay/internalCounter<3>
+   CLICKfilter/filterDelay/internalCounter<3>.DQ
+         0.382  CLICKfilter/filterDelay/internalCounter<3>.D4
+         0.599  CLICKfilter/filterDelay/countedNeededValue<15>.B4
+
+CLICKfilter/filterDelay/internalCounter<4>
+   CLICKfilter/filterDelay/internalCounter<7>.AQ
+         0.372  CLICKfilter/filterDelay/internalCounter<7>.A4
+         0.186  CLICKfilter/filterDelay/countedNeededValue<15>.B5
+
+CLICKfilter/filterDelay/internalCounter<5>
+   CLICKfilter/filterDelay/internalCounter<7>.BQ
+         0.320  CLICKfilter/filterDelay/internalCounter<7>.B4
+         0.310  CLICKfilter/filterDelay/countedNeededValue<15>.B6
+
+CLICKfilter/filterDelay/internalCounter<6>
+   CLICKfilter/filterDelay/internalCounter<7>.CQ
+         0.319  CLICKfilter/filterDelay/internalCounter<7>.C4
+         0.107  CLICKfilter/filterDelay/countedNeededValue<15>.A1
+
+CLICKfilter/filterDelay/internalCounter<7>
+   CLICKfilter/filterDelay/internalCounter<7>.DQ
+         0.381  CLICKfilter/filterDelay/internalCounter<7>.D4
+         0.500  CLICKfilter/filterDelay/countedNeededValue<15>.A2
+
+CLICKfilter/filterDelay/internalCounter<8>
+   CLICKfilter/filterDelay/internalCounter<11>.AQ
+         0.373  CLICKfilter/filterDelay/internalCounter<11>.A4
+         0.280  CLICKfilter/filterDelay/countedNeededValue<15>.A3
+
+CLICKfilter/filterDelay/internalCounter<9>
+   CLICKfilter/filterDelay/internalCounter<11>.BQ
+         0.322  CLICKfilter/filterDelay/internalCounter<11>.B4
+         0.592  CLICKfilter/filterDelay/countedNeededValue<15>.A4
+
+CLICKfilter/runCounter_inv
+   CLICKfilter/runCounter_inv.D
+         0.523  CLICKfilter/filterDelay/internalCounter<3>.SR
+         0.512  CLICKfilter/filterDelay/internalCounter<7>.SR
+         0.416  CLICKfilter/filterDelay/internalCounter<11>.SR
+         0.245  CLICKfilter/filterDelay/internalCounter<15>.SR
+
+CLICKfilter/sigChanged
+   CLICKfilter/filterDelay/filteredTick.B
+         0.493  CLICKfilter/currentState.CLK
+         0.347  CLICKfilter/filterDelay/filteredTick.C5
+
+LED/currentNumber/clk
+   CLICKfilter/filterDelay/filteredTick.A
+         0.506  CLICKfilter/filterDelay/filteredTick.C3
+         0.799  LED/currentNumber/counter<1>.CLK
+
+LED/currentNumber/clockDivider/Mcount_internalCounter_cy<11>
+   LED/currentNumber/clockDivider/internalCounter<11>.COUT
+         0.000  LED/currentNumber/clockDivider/internalCounter<15>.CIN
+
+LED/currentNumber/clockDivider/Mcount_internalCounter_cy<3>
+   LED/currentNumber/clockDivider/internalCounter<3>.COUT
+         0.000  LED/currentNumber/clockDivider/internalCounter<7>.CIN
+
+LED/currentNumber/clockDivider/Mcount_internalCounter_cy<7>
+   LED/currentNumber/clockDivider/internalCounter<7>.COUT
+         0.000  LED/currentNumber/clockDivider/internalCounter<11>.CIN
+
+LED/currentNumber/clockDivider/countedNeededValue<15>
+   LED/currentNumber/clockDivider/countedNeededValue<15>.B
+         0.297  LED/currentNumber/clockDivider/countedNeededValue<15>.A5
+
+LED/currentNumber/clockDivider/countedNeededValue<15>1
+   LED/currentNumber/clockDivider/countedNeededValue<15>.A
+         0.768  CLICKfilter/filterDelay/filteredTick.A5
+
+LED/currentNumber/clockDivider/filteredTick
+   CLICKfilter/filterDelay/filteredTick.CMUX
+         0.937  LED/currentNumber/clockDivider/internalCounter<3>.CLK
+         0.841  LED/currentNumber/clockDivider/internalCounter<7>.CLK
+         0.737  LED/currentNumber/clockDivider/internalCounter<11>.CLK
+         0.633  LED/currentNumber/clockDivider/internalCounter<15>.CLK
+
+LED/currentNumber/clockDivider/internalCounter<0>
+   LED/currentNumber/clockDivider/internalCounter<3>.AQ
+         0.373  LED/currentNumber/clockDivider/internalCounter<3>.A4
+         0.461  LED/currentNumber/clockDivider/countedNeededValue<15>.B2
+
+LED/currentNumber/clockDivider/internalCounter<10>
+   LED/currentNumber/clockDivider/internalCounter<11>.CQ
+         0.321  LED/currentNumber/clockDivider/internalCounter<11>.C4
+         0.386  LED/currentNumber/clockDivider/countedNeededValue<15>.A6
+
+LED/currentNumber/clockDivider/internalCounter<11>
+   LED/currentNumber/clockDivider/internalCounter<11>.DQ
+         0.384  LED/currentNumber/clockDivider/internalCounter<11>.D4
+         0.619  CLICKfilter/filterDelay/filteredTick.A1
+
+LED/currentNumber/clockDivider/internalCounter<12>
+   LED/currentNumber/clockDivider/internalCounter<15>.AQ
+         0.373  LED/currentNumber/clockDivider/internalCounter<15>.A4
+         0.797  CLICKfilter/filterDelay/filteredTick.A2
+
+LED/currentNumber/clockDivider/internalCounter<13>
+   LED/currentNumber/clockDivider/internalCounter<15>.BQ
+         0.322  LED/currentNumber/clockDivider/internalCounter<15>.B4
+         0.413  CLICKfilter/filterDelay/filteredTick.A3
+
+LED/currentNumber/clockDivider/internalCounter<14>
+   LED/currentNumber/clockDivider/internalCounter<15>.CQ
+         0.321  LED/currentNumber/clockDivider/internalCounter<15>.C4
+         0.905  CLICKfilter/filterDelay/filteredTick.A4
+
+LED/currentNumber/clockDivider/internalCounter<15>
+   LED/currentNumber/clockDivider/internalCounter<15>.DQ
+         0.339  LED/currentNumber/clockDivider/internalCounter<15>.D4
+         0.493  CLICKfilter/filterDelay/filteredTick.A6
+
+LED/currentNumber/clockDivider/internalCounter<1>
+   LED/currentNumber/clockDivider/internalCounter<3>.BQ
+         0.322  LED/currentNumber/clockDivider/internalCounter<3>.B4
+         0.596  LED/currentNumber/clockDivider/countedNeededValue<15>.B1
+
+LED/currentNumber/clockDivider/internalCounter<2>
+   LED/currentNumber/clockDivider/internalCounter<3>.CQ
+         0.321  LED/currentNumber/clockDivider/internalCounter<3>.C4
+         0.205  LED/currentNumber/clockDivider/countedNeededValue<15>.B3
+
+LED/currentNumber/clockDivider/internalCounter<3>
+   LED/currentNumber/clockDivider/internalCounter<3>.DQ
+         0.382  LED/currentNumber/clockDivider/internalCounter<3>.D4
+         0.599  LED/currentNumber/clockDivider/countedNeededValue<15>.B4
+
+LED/currentNumber/clockDivider/internalCounter<4>
+   LED/currentNumber/clockDivider/internalCounter<7>.AQ
+         0.372  LED/currentNumber/clockDivider/internalCounter<7>.A4
+         0.186  LED/currentNumber/clockDivider/countedNeededValue<15>.B5
+
+LED/currentNumber/clockDivider/internalCounter<5>
+   LED/currentNumber/clockDivider/internalCounter<7>.BQ
+         0.320  LED/currentNumber/clockDivider/internalCounter<7>.B4
+         0.310  LED/currentNumber/clockDivider/countedNeededValue<15>.B6
+
+LED/currentNumber/clockDivider/internalCounter<6>
+   LED/currentNumber/clockDivider/internalCounter<7>.CQ
+         0.319  LED/currentNumber/clockDivider/internalCounter<7>.C4
+         0.107  LED/currentNumber/clockDivider/countedNeededValue<15>.A1
+
+LED/currentNumber/clockDivider/internalCounter<7>
+   LED/currentNumber/clockDivider/internalCounter<7>.DQ
+         0.381  LED/currentNumber/clockDivider/internalCounter<7>.D4
+         0.500  LED/currentNumber/clockDivider/countedNeededValue<15>.A2
+
+LED/currentNumber/clockDivider/internalCounter<8>
+   LED/currentNumber/clockDivider/internalCounter<11>.AQ
+         0.373  LED/currentNumber/clockDivider/internalCounter<11>.A4
+         0.452  LED/currentNumber/clockDivider/countedNeededValue<15>.A3
+
+LED/currentNumber/clockDivider/internalCounter<9>
+   LED/currentNumber/clockDivider/internalCounter<11>.BQ
+         0.322  LED/currentNumber/clockDivider/internalCounter<11>.B4
+         0.592  LED/currentNumber/clockDivider/countedNeededValue<15>.A4
+
+LED/currentNumber/clr
+   LED/currentNumber/counter<1>.B
+         0.245  LED/currentNumber/counter<1>.SR
+
+LED/currentNumber/counter<0>
+   LED/currentNumber/counter<1>.AQ
+         0.246  N7.B1
+         0.248  LED/currentNumber/counter<1>.A4
+         0.406  LED/currentNumber/counter<1>.B5
+         0.271  seg_5_OBUF.C1
+         0.448  seg_3_OBUF.C4
+         0.485  seg_1_OBUF.A1
+         0.658  an_1_OBUF.D5
+
+LED/currentNumber/counter<1>
+   LED/currentNumber/counter<1>.BQ
+         0.344  N7.B2
+         0.713  N7.C1
+         0.328  LED/currentNumber/counter<1>.B4
+         0.470  seg_5_OBUF.C5
+         0.569  seg_3_OBUF.C5
+         0.778  seg_1_OBUF.A3
+         0.443  an_1_OBUF.D4
+
+LED/selectInput/y<0>
+   N7.CMUX
+         0.567  seg_3_OBUF.C3
+
+LED/selectedDigit<0>
+   seg_3_OBUF.CMUX
+         0.619  seg_5_OBUF.D4
+         0.200  seg_3_OBUF.B5
+         0.518  seg_3_OBUF.D4
+         0.434  seg_1_OBUF.B4
+
+LED/selectedDigit<1>
+   N7.B
+         0.568  seg_5_OBUF.D3
+         0.635  seg_3_OBUF.B2
+         0.592  seg_3_OBUF.D2
+         0.737  seg_1_OBUF.B5
+
+LED/selectedDigit<2>
+   seg_5_OBUF.C
+         0.311  seg_5_OBUF.D5
+         0.410  seg_3_OBUF.B3
+         0.718  seg_3_OBUF.D3
+         0.513  seg_1_OBUF.B3
+
+LED/selectedDigit<3>
+   seg_1_OBUF.A
+         0.287  seg_5_OBUF.D2
+         0.707  seg_3_OBUF.B4
+         0.393  seg_3_OBUF.D5
+         0.197  seg_1_OBUF.B6
+
+N7
+   N7.C
+         0.101  N7.B4
+
+RSTfilter/currentState
+   RSTfilter/currentState.DQ
+         0.500  RSTfilter/filterDelay/filteredTick.D3
+         0.223  RSTfilter/currentState.D4
+         1.035  core/counter/internalCounter<0>.SR
+         1.243  core/counter/internalCounter<5>.SR
+         1.038  core/counter/internalCounter<3>.SR
+
+RSTfilter/filterDelay/Mcount_internalCounter_cy<11>
+   RSTfilter/filterDelay/internalCounter<11>.COUT
+         0.000  RSTfilter/filterDelay/internalCounter<15>.CIN
+
+RSTfilter/filterDelay/Mcount_internalCounter_cy<3>
+   RSTfilter/filterDelay/internalCounter<3>.COUT
+         0.000  RSTfilter/filterDelay/internalCounter<7>.CIN
+
+RSTfilter/filterDelay/Mcount_internalCounter_cy<7>
+   RSTfilter/filterDelay/internalCounter<7>.COUT
+         0.000  RSTfilter/filterDelay/internalCounter<11>.CIN
+
+RSTfilter/filterDelay/countedNeededValue<15>
+   RSTfilter/filterDelay/countedNeededValue<15>.B
+         0.297  RSTfilter/filterDelay/countedNeededValue<15>.A5
+
+RSTfilter/filterDelay/countedNeededValue<15>1
+   RSTfilter/filterDelay/countedNeededValue<15>.A
+         0.553  RSTfilter/filterDelay/filteredTick.C5
+
+RSTfilter/filterDelay/filteredTick
+   RSTfilter/filterDelay/filteredTick.D
+         0.466  RSTfilter/filterDelay/internalCounter<3>.CLK
+         0.455  RSTfilter/filterDelay/internalCounter<7>.CLK
+         0.359  RSTfilter/filterDelay/internalCounter<11>.CLK
+         0.384  RSTfilter/filterDelay/internalCounter<15>.CLK
+
+RSTfilter/filterDelay/internalCounter<0>
+   RSTfilter/filterDelay/internalCounter<3>.AQ
+         0.373  RSTfilter/filterDelay/internalCounter<3>.A4
+         0.461  RSTfilter/filterDelay/countedNeededValue<15>.B2
+
+RSTfilter/filterDelay/internalCounter<10>
+   RSTfilter/filterDelay/internalCounter<11>.CQ
+         0.321  RSTfilter/filterDelay/internalCounter<11>.C4
+         0.554  RSTfilter/filterDelay/countedNeededValue<15>.A6
+
+RSTfilter/filterDelay/internalCounter<11>
+   RSTfilter/filterDelay/internalCounter<11>.DQ
+         0.382  RSTfilter/filterDelay/internalCounter<11>.D4
+         0.594  RSTfilter/filterDelay/filteredTick.C1
+
+RSTfilter/filterDelay/internalCounter<12>
+   RSTfilter/filterDelay/internalCounter<15>.AQ
+         0.372  RSTfilter/filterDelay/internalCounter<15>.A4
+         0.501  RSTfilter/filterDelay/filteredTick.C2
+
+RSTfilter/filterDelay/internalCounter<13>
+   RSTfilter/filterDelay/internalCounter<15>.BQ
+         0.320  RSTfilter/filterDelay/internalCounter<15>.B4
+         0.104  RSTfilter/filterDelay/filteredTick.C3
+
+RSTfilter/filterDelay/internalCounter<14>
+   RSTfilter/filterDelay/internalCounter<15>.CQ
+         0.319  RSTfilter/filterDelay/internalCounter<15>.C4
+         0.308  RSTfilter/filterDelay/filteredTick.C4
+
+RSTfilter/filterDelay/internalCounter<15>
+   RSTfilter/filterDelay/internalCounter<15>.DQ
+         0.336  RSTfilter/filterDelay/internalCounter<15>.D4
+         0.187  RSTfilter/filterDelay/filteredTick.C6
+
+RSTfilter/filterDelay/internalCounter<1>
+   RSTfilter/filterDelay/internalCounter<3>.BQ
+         0.322  RSTfilter/filterDelay/internalCounter<3>.B4
+         0.596  RSTfilter/filterDelay/countedNeededValue<15>.B1
+
+RSTfilter/filterDelay/internalCounter<2>
+   RSTfilter/filterDelay/internalCounter<3>.CQ
+         0.321  RSTfilter/filterDelay/internalCounter<3>.C4
+         0.205  RSTfilter/filterDelay/countedNeededValue<15>.B3
+
+RSTfilter/filterDelay/internalCounter<3>
+   RSTfilter/filterDelay/internalCounter<3>.DQ
+         0.382  RSTfilter/filterDelay/internalCounter<3>.D4
+         0.599  RSTfilter/filterDelay/countedNeededValue<15>.B4
+
+RSTfilter/filterDelay/internalCounter<4>
+   RSTfilter/filterDelay/internalCounter<7>.AQ
+         0.372  RSTfilter/filterDelay/internalCounter<7>.A4
+         0.186  RSTfilter/filterDelay/countedNeededValue<15>.B5
+
+RSTfilter/filterDelay/internalCounter<5>
+   RSTfilter/filterDelay/internalCounter<7>.BQ
+         0.320  RSTfilter/filterDelay/internalCounter<7>.B4
+         0.310  RSTfilter/filterDelay/countedNeededValue<15>.B6
+
+RSTfilter/filterDelay/internalCounter<6>
+   RSTfilter/filterDelay/internalCounter<7>.CQ
+         0.319  RSTfilter/filterDelay/internalCounter<7>.C4
+         0.107  RSTfilter/filterDelay/countedNeededValue<15>.A1
+
+RSTfilter/filterDelay/internalCounter<7>
+   RSTfilter/filterDelay/internalCounter<7>.DQ
+         0.381  RSTfilter/filterDelay/internalCounter<7>.D4
+         0.500  RSTfilter/filterDelay/countedNeededValue<15>.A2
+
+RSTfilter/filterDelay/internalCounter<8>
+   RSTfilter/filterDelay/internalCounter<11>.AQ
+         0.373  RSTfilter/filterDelay/internalCounter<11>.A4
+         0.280  RSTfilter/filterDelay/countedNeededValue<15>.A3
+
+RSTfilter/filterDelay/internalCounter<9>
+   RSTfilter/filterDelay/internalCounter<11>.BQ
+         0.322  RSTfilter/filterDelay/internalCounter<11>.B4
+         0.592  RSTfilter/filterDelay/countedNeededValue<15>.A4
+
+RSTfilter/runCounter_inv
+   RSTfilter/filterDelay/filteredTick.DMUX
+         0.373  RSTfilter/filterDelay/internalCounter<3>.SR
+         0.361  RSTfilter/filterDelay/internalCounter<7>.SR
+         0.265  RSTfilter/filterDelay/internalCounter<11>.SR
+         0.283  RSTfilter/filterDelay/internalCounter<15>.SR
+
+RSTfilter/sigChanged
+   RSTfilter/filterDelay/filteredTick.C
+         0.648  RSTfilter/filterDelay/filteredTick.D5
+         0.377  RSTfilter/currentState.CLK
+
+an_0_OBUF
+   seg_3_OBUF.C
+         1.863  an<0>.O
+
+an_1_OBUF
+   an_1_OBUF.D
+         1.734  an<1>.O
+
+an_2_OBUF
+   an_1_OBUF.DMUX
+         1.239  an<2>.O
+
+btnC_IBUF
+   btnC.I
+         2.358  RSTfilter/filterDelay/filteredTick.D2
+
+btnU_IBUF
+   btnU.I
+         2.600  CLICKfilter/runCounter_inv.D5
+
+clk_BUFGP
+   clk_BUFGP/BUFG.O
+         1.229  divideClock/clk_reg.CLK
+
+clk_BUFGP/IBUFG
+   clk.I
+         1.525  clk_BUFGP/BUFG.I0
+
+core/counter/internalCounter<0>
+   core/counter/internalCounter<0>.AQ
+         0.458  core/counter/internalCounter<0>.A4
+         0.477  core/counter/internalCounter<5>.A6
+         0.445  core/counter/internalCounter<5>.C5
+         0.443  core/counter/internalCounter<5>.D1
+         0.530  core/counter/internalCounter<3>.C2
+         0.742  seg_3_OBUF.C2
+
+core/counter/internalCounter<1>
+   core/counter/internalCounter<5>.CQ
+         0.461  core/counter/internalCounter<5>.A1
+         0.341  core/counter/internalCounter<5>.C4
+         0.523  core/counter/internalCounter<5>.D2
+         0.448  core/counter/internalCounter<3>.C3
+         0.723  N7.B6
+
+core/counter/internalCounter<2>
+   core/counter/internalCounter<5>.CMUX
+         0.230  core/counter/internalCounter<5>.A2
+         0.504  core/counter/internalCounter<5>.C3
+         0.542  core/counter/internalCounter<5>.D3
+         0.596  core/counter/internalCounter<3>.C5
+         0.744  N7.C4
+         0.755  seg_5_OBUF.C3
+         0.612  seg_1_OBUF.A2
+
+core/counter/internalCounter<3>
+   core/counter/internalCounter<3>.CQ
+         0.642  core/counter/internalCounter<5>.A3
+         0.328  core/counter/internalCounter<5>.D5
+         0.527  core/counter/internalCounter<3>.C4
+         0.634  N7.B5
+         0.330  N7.C5
+         0.637  seg_5_OBUF.C6
+         0.252  seg_1_OBUF.A6
+
+core/counter/internalCounter<4>
+   core/counter/internalCounter<3>.CMUX
+         0.254  core/counter/internalCounter<5>.A4
+         0.378  core/counter/internalCounter<5>.D6
+         0.448  core/counter/internalCounter<3>.C1
+         0.572  N7.C3
+         0.425  seg_5_OBUF.C2
+         0.443  seg_1_OBUF.A5
+
+core/counter/internalCounter<5>
+   core/counter/internalCounter<5>.DQ
+         0.622  core/counter/internalCounter<5>.A5
+         0.385  core/counter/internalCounter<5>.D4
+         0.504  N7.B3
+         0.635  N7.C2
+         0.600  seg_5_OBUF.C4
+         0.747  seg_1_OBUF.A4
+
+divideClock/clk_reg
+   divideClock/clk_reg.AQ
+         0.864  RSTfilter/filterDelay/filteredTick.D4
+         0.349  divideClock/clk_reg.A4
+         0.900  CLICKfilter/filterDelay/filteredTick.C4
+
+led_0_OBUF
+   core/counter/internalCounter<5>.A
+         2.267  led<0>.O
+
+seg_0_OBUF
+   seg_3_OBUF.DMUX
+         1.444  seg<0>.O
+
+seg_1_OBUF
+   seg_1_OBUF.B
+         1.342  seg<1>.O
+
+seg_2_OBUF
+   seg_5_OBUF.DMUX
+         1.192  seg<2>.O
+
+seg_3_OBUF
+   seg_3_OBUF.D
+         1.304  seg<3>.O
+
+seg_4_OBUF
+   seg_3_OBUF.BMUX
+         1.538  seg<4>.O
+
+seg_5_OBUF
+   seg_5_OBUF.D
+         1.437  seg<5>.O
+
+seg_6_OBUF
+   seg_3_OBUF.B
+         1.190  seg<6>.O
+

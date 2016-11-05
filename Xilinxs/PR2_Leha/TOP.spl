@@ -1,0 +1,12 @@
+[Inputs]
+clk
+btnC
+btnU
+[Outputs]
+led0
+=seg[7:0]=
+=an[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel TOP
+

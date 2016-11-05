@@ -1,0 +1,4 @@
+verilog work "counter10k.v"
+verilog work "BTN_FILTER.v"
+verilog work "test_btn.v"
+verilog work "/media/ext4_tb/lin/moved/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
