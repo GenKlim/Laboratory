@@ -138,9 +138,7 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reg_16x4.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="reg_16x4.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_HexToSeg_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_LED_driver_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_LED_driver_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_LED_driver_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_LED_driver_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="test_TOP.cmd_log"/>
     <file xil_pn:fileType="FILE_LSO" xil_pn:name="test_TOP.lso"/>
@@ -153,7 +151,9 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_TOP_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_TOP_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_btn_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_core_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_core_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_core_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_counter10k_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_counter10k_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_ctr64_beh.prj"/>
@@ -177,7 +177,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477905437" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477905436">
+    <transform xil_pn:end_ts="1478695602" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1478695602">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BTN_FILTER.v"/>
@@ -200,11 +200,11 @@
       <outfile xil_pn:name="test_counter10k.v"/>
       <outfile xil_pn:name="test_ctr64.v"/>
     </transform>
-    <transform xil_pn:end_ts="1477905321" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2729134180570513814" xil_pn:start_ts="1477905321">
+    <transform xil_pn:end_ts="1478696510" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6439040448719709409" xil_pn:start_ts="1478696510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477905321" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1842612893414007628" xil_pn:start_ts="1477905321">
+    <transform xil_pn:end_ts="1478696510" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4815588655912635325" xil_pn:start_ts="1478696510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -212,7 +212,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477905437" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1477905437">
+    <transform xil_pn:end_ts="1478695602" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1478695602">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BTN_FILTER.v"/>
@@ -235,7 +235,7 @@
       <outfile xil_pn:name="test_counter10k.v"/>
       <outfile xil_pn:name="test_ctr64.v"/>
     </transform>
-    <transform xil_pn:end_ts="1477905439" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1094659657047137072" xil_pn:start_ts="1477905437">
+    <transform xil_pn:end_ts="1478696513" xil_pn:in_ck="-5832722120428420545" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1249180368137822622" xil_pn:start_ts="1478696510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -243,18 +243,18 @@
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_LED_driver_beh.prj"/>
-      <outfile xil_pn:name="test_LED_driver_isim_beh.exe"/>
+      <outfile xil_pn:name="test_core_beh.prj"/>
+      <outfile xil_pn:name="test_core_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1477905439" xil_pn:in_ck="-45454757917338722" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-298221428955197627" xil_pn:start_ts="1477905439">
+    <transform xil_pn:end_ts="1478696513" xil_pn:in_ck="-45454757917338722" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7794329494228813449" xil_pn:start_ts="1478696513">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_LED_driver_isim_beh.wdb"/>
+      <outfile xil_pn:name="test_core_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1476816268" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1476816268">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -284,7 +284,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477905073" xil_pn:in_ck="-6150582239640277628" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5548391801465844787" xil_pn:start_ts="1477905059">
+    <transform xil_pn:end_ts="1478696419" xil_pn:in_ck="-6150582239640277628" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5548391801465844787" xil_pn:start_ts="1478696401">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TOP.lso"/>

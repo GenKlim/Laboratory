@@ -20,7 +20,7 @@ initial
 
 assign countedNeededValue = (internalCounter == 16'h0000);
 assign filteredTick = tick & (~countedNeededValue);
-assign clear = ~run;
+assign clear = ~run | countedNeededValue;
 
 always @ (posedge filteredTick or posedge clear)
 	if(clear)

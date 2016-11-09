@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Reading design: TOP.prj
 
@@ -105,29 +105,29 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\counter10k.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\counter10k.v" into library work
 Parsing module <counter10k>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\reg_16x4.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\reg_16x4.v" into library work
 Parsing module <reg_16x4>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\multiplexer4.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\multiplexer4.v" into library work
 Parsing module <multiplexer4>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\MS3.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\MS3.v" into library work
 Parsing module <MS3>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\HexToSeg.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\HexToSeg.v" into library work
 Parsing module <HexToSeg>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\DC3.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\DC3.v" into library work
 Parsing module <DC3>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\ctr64.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\ctr64.v" into library work
 Parsing module <ctr64>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\ctr4.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\ctr4.v" into library work
 Parsing module <ctr4>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\LED_driver.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\LED_driver.v" into library work
 Parsing module <LED_driver>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\core.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\core.v" into library work
 Parsing module <core>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\BTN_FILTER.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\BTN_FILTER.v" into library work
 Parsing module <BTN_FILTER>.
-Analyzing Verilog file "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\TOP.v" into library work
+Analyzing Verilog file "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\TOP.v" into library work
 Parsing module <TOP>.
 Parsing module <clkDivider>.
 
@@ -166,28 +166,43 @@ Elaborating module <DC3>.
 =========================================================================
 
 Synthesizing Unit <TOP>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\TOP.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\TOP.v".
     Summary:
 	no macro.
 Unit <TOP> synthesized.
 
 Synthesizing Unit <clkDivider>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\TOP.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\TOP.v".
     Found 1-bit register for signal <clk_reg>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <clkDivider> synthesized.
 
 Synthesizing Unit <BTN_FILTER>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\BTN_FILTER.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\BTN_FILTER.v".
     Found 1-bit register for signal <currentState>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <BTN_FILTER> synthesized.
 
 Synthesizing Unit <counter10k>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\counter10k.v".
-    Found 16-bit register for signal <internalCounter>.
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\counter10k.v".
+    Found 1-bit register for signal <internalCounter<15>>.
+    Found 1-bit register for signal <internalCounter<14>>.
+    Found 1-bit register for signal <internalCounter<13>>.
+    Found 1-bit register for signal <internalCounter<12>>.
+    Found 1-bit register for signal <internalCounter<11>>.
+    Found 1-bit register for signal <internalCounter<10>>.
+    Found 1-bit register for signal <internalCounter<9>>.
+    Found 1-bit register for signal <internalCounter<8>>.
+    Found 1-bit register for signal <internalCounter<7>>.
+    Found 1-bit register for signal <internalCounter<6>>.
+    Found 1-bit register for signal <internalCounter<5>>.
+    Found 1-bit register for signal <internalCounter<4>>.
+    Found 1-bit register for signal <internalCounter<3>>.
+    Found 1-bit register for signal <internalCounter<2>>.
+    Found 1-bit register for signal <internalCounter<1>>.
+    Found 1-bit register for signal <internalCounter<0>>.
     Found 16-bit subtractor for signal <internalCounter[15]_GND_4_o_sub_3_OUT> created at line 29.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -195,13 +210,13 @@ Synthesizing Unit <counter10k>.
 Unit <counter10k> synthesized.
 
 Synthesizing Unit <core>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\core.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\core.v".
     Summary:
 	no macro.
 Unit <core> synthesized.
 
 Synthesizing Unit <ctr64>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\ctr64.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\ctr64.v".
     Found 6-bit register for signal <internalCounter>.
     Found 6-bit adder for signal <internalCounter[5]_GND_6_o_add_2_OUT> created at line 39.
     Summary:
@@ -210,33 +225,33 @@ Synthesizing Unit <ctr64>.
 Unit <ctr64> synthesized.
 
 Synthesizing Unit <reg_16x4>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\reg_16x4.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\reg_16x4.v".
     Found 16x4-bit Read Only RAM for signal <Y>
     Summary:
 	inferred   1 RAM(s).
 Unit <reg_16x4> synthesized.
 
 Synthesizing Unit <multiplexer4>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\multiplexer4.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\multiplexer4.v".
     Found 1-bit 4-to-1 multiplexer for signal <Y> created at line 32.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <multiplexer4> synthesized.
 
 Synthesizing Unit <LED_driver>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\LED_driver.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\LED_driver.v".
     Summary:
 	no macro.
 Unit <LED_driver> synthesized.
 
 Synthesizing Unit <MS3>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\MS3.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\MS3.v".
     Summary:
 	no macro.
 Unit <MS3> synthesized.
 
 Synthesizing Unit <ctr4>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\ctr4.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\ctr4.v".
     Found 2-bit register for signal <counter>.
     Found 2-bit adder for signal <counter[1]_GND_11_o_add_1_OUT> created at line 34.
     Summary:
@@ -245,14 +260,14 @@ Synthesizing Unit <ctr4>.
 Unit <ctr4> synthesized.
 
 Synthesizing Unit <HexToSeg>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\HexToSeg.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\HexToSeg.v".
     Found 16x7-bit Read Only RAM for signal <y>
     Summary:
 	inferred   1 RAM(s).
 Unit <HexToSeg> synthesized.
 
 Synthesizing Unit <DC3>.
-    Related source file is "C:\Users\admin\Desktop\MAKSIMOV_LR2_4\DC3.v".
+    Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Leha\DC3.v".
     Found 4x3-bit Read Only RAM for signal <y>
     Summary:
 	inferred   1 RAM(s).
@@ -270,9 +285,8 @@ Macro Statistics
  16-bit subtractor                                     : 3
  2-bit adder                                           : 1
  6-bit adder                                           : 1
-# Registers                                            : 8
- 1-bit register                                        : 3
- 16-bit register                                       : 3
+# Registers                                            : 53
+ 1-bit register                                        : 51
  2-bit register                                        : 1
  6-bit register                                        : 1
 # Multiplexers                                         : 1
@@ -315,10 +329,6 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_y> will be implemented on LUTs eithe
     -----------------------------------------------------------------------
 Unit <HexToSeg> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter10k>.
-The following registers are absorbed into counter <internalCounter>: 1 register on signal <internalCounter>.
-Unit <counter10k> synthesized (advanced).
-
 Synthesizing (advanced) Unit <ctr4>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 Unit <ctr4> synthesized (advanced).
@@ -349,12 +359,13 @@ Macro Statistics
  16x4-bit single-port distributed Read Only RAM        : 1
  16x7-bit single-port distributed Read Only RAM        : 1
  4x3-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 5
- 16-bit down counter                                   : 3
+# Adders/Subtractors                                   : 3
+ 16-bit subtractor                                     : 3
+# Counters                                             : 2
  2-bit up counter                                      : 1
  6-bit up counter                                      : 1
-# Registers                                            : 3
- Flip-Flops                                            : 3
+# Registers                                            : 51
+ Flip-Flops                                            : 51
 # Multiplexers                                         : 1
  1-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 2
@@ -367,6 +378,8 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <TOP> ...
+
+Optimizing unit <counter10k> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -402,22 +415,22 @@ Top Level Output File Name         : TOP.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 186
+# BELS                             : 188
 #      GND                         : 1
 #      INV                         : 50
 #      LUT1                        : 3
-#      LUT2                        : 11
-#      LUT3                        : 2
+#      LUT2                        : 9
+#      LUT3                        : 4
 #      LUT4                        : 9
 #      LUT5                        : 2
-#      LUT6                        : 14
+#      LUT6                        : 16
 #      MUXCY                       : 45
 #      VCC                         : 1
 #      XORCY                       : 48
 # FlipFlops/Latches                : 59
-#      FD                          : 19
-#      FDC                         : 26
-#      FDP                         : 12
+#      FD                          : 3
+#      FDC                         : 36
+#      FDP                         : 18
 #      FDR                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -433,14 +446,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              59  out of  126800     0%  
- Number of Slice LUTs:                   91  out of  63400     0%  
-    Number used as Logic:                91  out of  63400     0%  
+ Number of Slice LUTs:                   93  out of  63400     0%  
+    Number used as Logic:                93  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    100
-   Number with an unused Flip Flop:      41  out of    100    41%  
-   Number with an unused LUT:             9  out of    100     9%  
-   Number of fully used LUT-FF pairs:    50  out of    100    50%  
+ Number of LUT Flip Flop pairs used:    106
+   Number with an unused Flip Flop:      47  out of    106    44%  
+   Number with an unused LUT:            13  out of    106    12%  
+   Number of fully used LUT-FF pairs:    46  out of    106    43%  
    Number of unique control sets:         8
 
 IO Utilization: 
@@ -468,18 +481,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-Clock Signal                                                                               | Clock buffer(FF name)                                    | Load  |
--------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
-clk                                                                                        | BUFGP                                                    | 1     |
-CLICKfilter/sigChanged(CLICKfilter/filterDelay/countedNeededValue<15>3:O)                  | NONE(*)(CLICKfilter/currentState)                        | 1     |
-RSTfilter/sigChanged(RSTfilter/filterDelay/countedNeededValue<15>3:O)                      | NONE(*)(RSTfilter/currentState)                          | 1     |
-LED/currentNumber/clk(LED/currentNumber/clockDivider/countedNeededValue<15>3:O)            | NONE(*)(LED/currentNumber/counter_0)                     | 2     |
-RSTfilter/filterDelay/filteredTick(RSTfilter/filterDelay/filteredTick1:O)                  | NONE(*)(RSTfilter/filterDelay/internalCounter_0)         | 16    |
-CLICKfilter/filterDelay/filteredTick(CLICKfilter/filterDelay/filteredTick1:O)              | NONE(*)(CLICKfilter/filterDelay/internalCounter_1)       | 16    |
-CLICKfilter/currentState                                                                   | NONE(core/counter/internalCounter_0)                     | 6     |
-LED/currentNumber/clockDivider/filteredTick(LED/currentNumber/clockDivider/filteredTick1:O)| NONE(*)(LED/currentNumber/clockDivider/internalCounter_0)| 16    |
--------------------------------------------------------------------------------------------+----------------------------------------------------------+-------+
+-------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+Clock Signal                                                                               | Clock buffer(FF name)                                     | Load  |
+-------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+clk                                                                                        | BUFGP                                                     | 1     |
+CLICKfilter/sigChanged(CLICKfilter/filterDelay/countedNeededValue<15>3:O)                  | NONE(*)(CLICKfilter/currentState)                         | 1     |
+RSTfilter/sigChanged(RSTfilter/filterDelay/countedNeededValue<15>3:O)                      | NONE(*)(RSTfilter/currentState)                           | 1     |
+CLICKfilter/currentState                                                                   | NONE(core/counter/internalCounter_0)                      | 6     |
+LED/currentNumber/clk(LED/currentNumber/clockDivider/countedNeededValue<15>3:O)            | NONE(*)(LED/currentNumber/counter_0)                      | 2     |
+LED/currentNumber/clockDivider/filteredTick(LED/currentNumber/clockDivider/filteredTick1:O)| NONE(*)(LED/currentNumber/clockDivider/internalCounter_15)| 16    |
+RSTfilter/filterDelay/filteredTick(RSTfilter/filterDelay/filteredTick1:O)                  | NONE(*)(RSTfilter/filterDelay/internalCounter_15)         | 16    |
+CLICKfilter/filterDelay/filteredTick(CLICKfilter/filterDelay/filteredTick1:O)              | NONE(*)(CLICKfilter/filterDelay/internalCounter_15)       | 16    |
+-------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
 (*) These 6 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -493,8 +506,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.811ns (Maximum Frequency: 552.334MHz)
-   Minimum input arrival time before clock: 1.174ns
+   Minimum period: 2.343ns (Maximum Frequency: 426.730MHz)
+   Minimum input arrival time before clock: 1.478ns
    Maximum output required time after clock: 2.566ns
    Maximum combinational path delay: No path found
 
@@ -569,6 +582,28 @@ Delay:               1.073ns (Levels of Logic = 1)
                                        (44.9% logic, 55.1% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'CLICKfilter/currentState'
+  Clock period: 1.182ns (frequency: 845.737MHz)
+  Total number of paths / destination ports: 21 / 6
+-------------------------------------------------------------------------
+Delay:               1.182ns (Levels of Logic = 1)
+  Source:            core/counter/internalCounter_5 (FF)
+  Destination:       core/counter/internalCounter_5 (FF)
+  Source Clock:      CLICKfilter/currentState rising
+  Destination Clock: CLICKfilter/currentState rising
+
+  Data Path: core/counter/internalCounter_5 to core/counter/internalCounter_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.716  core/counter/internalCounter_5 (core/counter/internalCounter_5)
+     LUT6:I0->O            1   0.097   0.000  core/counter/Mcount_internalCounter_xor<5>11 (Result<5>)
+     FDC:D                     0.008          core/counter/internalCounter_5
+    ----------------------------------------
+    Total                      1.182ns (0.466ns logic, 0.716ns route)
+                                       (39.4% logic, 60.6% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'LED/currentNumber/clk'
   Clock period: 1.511ns (frequency: 661.770MHz)
   Total number of paths / destination ports: 7 / 4
@@ -591,180 +626,113 @@ Delay:               1.511ns (Levels of Logic = 1)
                                        (53.4% logic, 46.6% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'RSTfilter/filterDelay/filteredTick'
-  Clock period: 1.811ns (frequency: 552.334MHz)
-  Total number of paths / destination ports: 136 / 16
--------------------------------------------------------------------------
-Delay:               1.811ns (Levels of Logic = 17)
-  Source:            RSTfilter/filterDelay/internalCounter_0 (FF)
-  Destination:       RSTfilter/filterDelay/internalCounter_15 (FF)
-  Source Clock:      RSTfilter/filterDelay/filteredTick rising
-  Destination Clock: RSTfilter/filterDelay/filteredTick rising
-
-  Data Path: RSTfilter/filterDelay/internalCounter_0 to RSTfilter/filterDelay/internalCounter_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.361   0.299  RSTfilter/filterDelay/internalCounter_0 (RSTfilter/filterDelay/internalCounter_0)
-     LUT1:I0->O            1   0.097   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<0>_rt (RSTfilter/filterDelay/Mcount_internalCounter_cy<0>_rt)
-     MUXCY:S->O            1   0.353   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<0> (RSTfilter/filterDelay/Mcount_internalCounter_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<1> (RSTfilter/filterDelay/Mcount_internalCounter_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<2> (RSTfilter/filterDelay/Mcount_internalCounter_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<3> (RSTfilter/filterDelay/Mcount_internalCounter_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<4> (RSTfilter/filterDelay/Mcount_internalCounter_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<5> (RSTfilter/filterDelay/Mcount_internalCounter_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<6> (RSTfilter/filterDelay/Mcount_internalCounter_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<7> (RSTfilter/filterDelay/Mcount_internalCounter_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<8> (RSTfilter/filterDelay/Mcount_internalCounter_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<9> (RSTfilter/filterDelay/Mcount_internalCounter_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<10> (RSTfilter/filterDelay/Mcount_internalCounter_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<11> (RSTfilter/filterDelay/Mcount_internalCounter_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<12> (RSTfilter/filterDelay/Mcount_internalCounter_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<13> (RSTfilter/filterDelay/Mcount_internalCounter_cy<13>)
-     MUXCY:CI->O           0   0.023   0.000  RSTfilter/filterDelay/Mcount_internalCounter_cy<14> (RSTfilter/filterDelay/Mcount_internalCounter_cy<14>)
-     XORCY:CI->O           1   0.370   0.000  RSTfilter/filterDelay/Mcount_internalCounter_xor<15> (Result<15>1)
-     FDP:D                     0.008          RSTfilter/filterDelay/internalCounter_15
-    ----------------------------------------
-    Total                      1.811ns (1.511ns logic, 0.299ns route)
-                                       (83.5% logic, 16.5% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'CLICKfilter/filterDelay/filteredTick'
-  Clock period: 1.811ns (frequency: 552.334MHz)
-  Total number of paths / destination ports: 136 / 16
--------------------------------------------------------------------------
-Delay:               1.811ns (Levels of Logic = 17)
-  Source:            CLICKfilter/filterDelay/internalCounter_0 (FF)
-  Destination:       CLICKfilter/filterDelay/internalCounter_15 (FF)
-  Source Clock:      CLICKfilter/filterDelay/filteredTick rising
-  Destination Clock: CLICKfilter/filterDelay/filteredTick rising
-
-  Data Path: CLICKfilter/filterDelay/internalCounter_0 to CLICKfilter/filterDelay/internalCounter_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.361   0.299  CLICKfilter/filterDelay/internalCounter_0 (CLICKfilter/filterDelay/internalCounter_0)
-     LUT1:I0->O            1   0.097   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<0>_rt (CLICKfilter/filterDelay/Mcount_internalCounter_cy<0>_rt)
-     MUXCY:S->O            1   0.353   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<0> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<1> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<2> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<3> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<4> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<5> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<6> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<7> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<8> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<9> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<10> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<11> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<12> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<13> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<13>)
-     MUXCY:CI->O           0   0.023   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_cy<14> (CLICKfilter/filterDelay/Mcount_internalCounter_cy<14>)
-     XORCY:CI->O           1   0.370   0.000  CLICKfilter/filterDelay/Mcount_internalCounter_xor<15> (Result<15>2)
-     FDP:D                     0.008          CLICKfilter/filterDelay/internalCounter_15
-    ----------------------------------------
-    Total                      1.811ns (1.511ns logic, 0.299ns route)
-                                       (83.5% logic, 16.5% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'CLICKfilter/currentState'
-  Clock period: 1.182ns (frequency: 845.737MHz)
-  Total number of paths / destination ports: 21 / 6
--------------------------------------------------------------------------
-Delay:               1.182ns (Levels of Logic = 1)
-  Source:            core/counter/internalCounter_5 (FF)
-  Destination:       core/counter/internalCounter_5 (FF)
-  Source Clock:      CLICKfilter/currentState rising
-  Destination Clock: CLICKfilter/currentState rising
-
-  Data Path: core/counter/internalCounter_5 to core/counter/internalCounter_5
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              6   0.361   0.716  core/counter/internalCounter_5 (core/counter/internalCounter_5)
-     LUT6:I0->O            1   0.097   0.000  core/counter/Mcount_internalCounter_xor<5>11 (Result<5>1)
-     FDC:D                     0.008          core/counter/internalCounter_5
-    ----------------------------------------
-    Total                      1.182ns (0.466ns logic, 0.716ns route)
-                                       (39.4% logic, 60.6% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'LED/currentNumber/clockDivider/filteredTick'
-  Clock period: 1.811ns (frequency: 552.334MHz)
-  Total number of paths / destination ports: 136 / 16
+  Clock period: 2.343ns (frequency: 426.730MHz)
+  Total number of paths / destination ports: 392 / 32
 -------------------------------------------------------------------------
-Delay:               1.811ns (Levels of Logic = 17)
-  Source:            LED/currentNumber/clockDivider/internalCounter_0 (FF)
+Delay:               2.343ns (Levels of Logic = 2)
+  Source:            LED/currentNumber/clockDivider/internalCounter_1 (FF)
   Destination:       LED/currentNumber/clockDivider/internalCounter_15 (FF)
   Source Clock:      LED/currentNumber/clockDivider/filteredTick rising
   Destination Clock: LED/currentNumber/clockDivider/filteredTick rising
 
-  Data Path: LED/currentNumber/clockDivider/internalCounter_0 to LED/currentNumber/clockDivider/internalCounter_15
+  Data Path: LED/currentNumber/clockDivider/internalCounter_1 to LED/currentNumber/clockDivider/internalCounter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.361   0.299  LED/currentNumber/clockDivider/internalCounter_0 (LED/currentNumber/clockDivider/internalCounter_0)
-     LUT1:I0->O            1   0.097   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<0>_rt (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<0>_rt)
-     MUXCY:S->O            1   0.353   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<0> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<1> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<2> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<3> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<4> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<5> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<6> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<7> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<8> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<9> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<10> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<11> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<12> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<13> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<13>)
-     MUXCY:CI->O           0   0.023   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_cy<14> (LED/currentNumber/clockDivider/Mcount_internalCounter_cy<14>)
-     XORCY:CI->O           1   0.370   0.000  LED/currentNumber/clockDivider/Mcount_internalCounter_xor<15> (Result<15>)
-     FD:D                      0.008          LED/currentNumber/clockDivider/internalCounter_15
+     FDC:C->Q              2   0.361   0.697  LED/currentNumber/clockDivider/internalCounter_1 (LED/currentNumber/clockDivider/internalCounter_1)
+     LUT6:I0->O            1   0.097   0.379  LED/currentNumber/clockDivider/countedNeededValue<15>1 (LED/currentNumber/clockDivider/countedNeededValue<15>)
+     LUT6:I4->O           19   0.097   0.363  LED/currentNumber/clockDivider/countedNeededValue<15>3 (LED/currentNumber/clk)
+     FDC:CLR                   0.349          LED/currentNumber/clockDivider/internalCounter_13
     ----------------------------------------
-    Total                      1.811ns (1.511ns logic, 0.299ns route)
-                                       (83.5% logic, 16.5% route)
+    Total                      2.343ns (0.904ns logic, 1.439ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RSTfilter/filterDelay/filteredTick'
+  Clock period: 2.333ns (frequency: 428.651MHz)
+  Total number of paths / destination ports: 392 / 32
+-------------------------------------------------------------------------
+Delay:               2.333ns (Levels of Logic = 2)
+  Source:            RSTfilter/filterDelay/internalCounter_1 (FF)
+  Destination:       RSTfilter/filterDelay/internalCounter_15 (FF)
+  Source Clock:      RSTfilter/filterDelay/filteredTick rising
+  Destination Clock: RSTfilter/filterDelay/filteredTick rising
+
+  Data Path: RSTfilter/filterDelay/internalCounter_1 to RSTfilter/filterDelay/internalCounter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.361   0.697  RSTfilter/filterDelay/internalCounter_1 (RSTfilter/filterDelay/internalCounter_1)
+     LUT6:I0->O            2   0.097   0.383  RSTfilter/filterDelay/countedNeededValue<15>1 (RSTfilter/filterDelay/countedNeededValue<15>)
+     LUT6:I4->O           16   0.097   0.348  RSTfilter/filterDelay/clear1 (RSTfilter/filterDelay/clear)
+     FDC:CLR                   0.349          RSTfilter/filterDelay/internalCounter_13
+    ----------------------------------------
+    Total                      2.333ns (0.904ns logic, 1.429ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLICKfilter/filterDelay/filteredTick'
+  Clock period: 2.333ns (frequency: 428.651MHz)
+  Total number of paths / destination ports: 392 / 32
+-------------------------------------------------------------------------
+Delay:               2.333ns (Levels of Logic = 2)
+  Source:            CLICKfilter/filterDelay/internalCounter_1 (FF)
+  Destination:       CLICKfilter/filterDelay/internalCounter_15 (FF)
+  Source Clock:      CLICKfilter/filterDelay/filteredTick rising
+  Destination Clock: CLICKfilter/filterDelay/filteredTick rising
+
+  Data Path: CLICKfilter/filterDelay/internalCounter_1 to CLICKfilter/filterDelay/internalCounter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.361   0.697  CLICKfilter/filterDelay/internalCounter_1 (CLICKfilter/filterDelay/internalCounter_1)
+     LUT6:I0->O            2   0.097   0.383  CLICKfilter/filterDelay/countedNeededValue<15>1 (CLICKfilter/filterDelay/countedNeededValue<15>)
+     LUT6:I4->O           16   0.097   0.348  CLICKfilter/filterDelay/clear1 (CLICKfilter/filterDelay/clear)
+     FDC:CLR                   0.349          CLICKfilter/filterDelay/internalCounter_13
+    ----------------------------------------
+    Total                      2.333ns (0.904ns logic, 1.429ns route)
+                                       (38.8% logic, 61.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'RSTfilter/filterDelay/filteredTick'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              1.174ns (Levels of Logic = 2)
+Offset:              1.478ns (Levels of Logic = 2)
   Source:            btnC (PAD)
-  Destination:       RSTfilter/filterDelay/internalCounter_0 (FF)
+  Destination:       RSTfilter/filterDelay/internalCounter_15 (FF)
   Destination Clock: RSTfilter/filterDelay/filteredTick rising
 
-  Data Path: btnC to RSTfilter/filterDelay/internalCounter_0
+  Data Path: btnC to RSTfilter/filterDelay/internalCounter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.379  btnC_IBUF (btnC_IBUF)
-     LUT2:I0->O           16   0.097   0.348  RSTfilter/runCounter_inv1 (RSTfilter/runCounter_inv)
-     FDC:CLR                   0.349          RSTfilter/filterDelay/internalCounter_0
+     IBUF:I->O             1   0.001   0.683  btnC_IBUF (btnC_IBUF)
+     LUT6:I1->O           16   0.097   0.348  RSTfilter/filterDelay/clear1 (RSTfilter/filterDelay/clear)
+     FDC:CLR                   0.349          RSTfilter/filterDelay/internalCounter_13
     ----------------------------------------
-    Total                      1.174ns (0.447ns logic, 0.727ns route)
-                                       (38.1% logic, 61.9% route)
+    Total                      1.478ns (0.447ns logic, 1.031ns route)
+                                       (30.2% logic, 69.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLICKfilter/filterDelay/filteredTick'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              1.174ns (Levels of Logic = 2)
+Offset:              1.478ns (Levels of Logic = 2)
   Source:            btnU (PAD)
-  Destination:       CLICKfilter/filterDelay/internalCounter_1 (FF)
+  Destination:       CLICKfilter/filterDelay/internalCounter_15 (FF)
   Destination Clock: CLICKfilter/filterDelay/filteredTick rising
 
-  Data Path: btnU to CLICKfilter/filterDelay/internalCounter_1
+  Data Path: btnU to CLICKfilter/filterDelay/internalCounter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.379  btnU_IBUF (btnU_IBUF)
-     LUT2:I0->O           16   0.097   0.348  CLICKfilter/runCounter_inv1 (CLICKfilter/runCounter_inv)
-     FDC:CLR                   0.349          CLICKfilter/filterDelay/internalCounter_1
+     IBUF:I->O             1   0.001   0.683  btnU_IBUF (btnU_IBUF)
+     LUT6:I1->O           16   0.097   0.348  CLICKfilter/filterDelay/clear1 (CLICKfilter/filterDelay/clear)
+     FDC:CLR                   0.349          CLICKfilter/filterDelay/internalCounter_13
     ----------------------------------------
-    Total                      1.174ns (0.447ns logic, 0.727ns route)
-                                       (38.1% logic, 61.9% route)
+    Total                      1.478ns (0.447ns logic, 1.031ns route)
+                                       (30.2% logic, 69.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'LED/currentNumber/clk'
@@ -802,7 +770,7 @@ Offset:              2.566ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              7   0.361   0.539  core/counter/internalCounter_4 (core/counter/internalCounter_4)
-     LUT3:I0->O            1   0.097   0.511  LED/selectInput/y<1>_SW0 (N7)
+     LUT3:I0->O            1   0.097   0.511  LED/selectInput/y<1>_SW0 (N4)
      LUT6:I3->O            7   0.097   0.584  LED/selectInput/y<1> (LED/selectedDigit<1>)
      LUT4:I0->O            1   0.097   0.279  LED/DC7/Mram_y31 (seg_6_OBUF)
      OBUF:I->O                 0.000          seg_6_OBUF (seg<6>)
@@ -829,8 +797,8 @@ Clock to Setup on destination clock CLICKfilter/filterDelay/filteredTick
                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------+---------+---------+---------+---------+
-CLICKfilter/filterDelay/filteredTick|    1.811|         |         |         |
-CLICKfilter/sigChanged              |    1.482|         |         |         |
+CLICKfilter/filterDelay/filteredTick|    2.333|         |         |         |
+CLICKfilter/sigChanged              |    1.880|         |         |         |
 ------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLICKfilter/sigChanged
@@ -854,7 +822,7 @@ Clock to Setup on destination clock LED/currentNumber/clockDivider/filteredTick
                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------+---------+---------+---------+---------+
-LED/currentNumber/clockDivider/filteredTick|    1.811|         |         |         |
+LED/currentNumber/clockDivider/filteredTick|    2.343|         |         |         |
 -------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock RSTfilter/filterDelay/filteredTick
@@ -862,8 +830,8 @@ Clock to Setup on destination clock RSTfilter/filterDelay/filteredTick
                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------+---------+---------+---------+---------+
-RSTfilter/filterDelay/filteredTick|    1.811|         |         |         |
-RSTfilter/sigChanged              |    1.482|         |         |         |
+RSTfilter/filterDelay/filteredTick|    2.333|         |         |         |
+RSTfilter/sigChanged              |    1.880|         |         |         |
 ----------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock RSTfilter/sigChanged
@@ -885,12 +853,12 @@ clk            |    1.055|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.38 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.01 secs
  
 --> 
 
-Total memory usage is 409200 kilobytes
+Total memory usage is 413848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

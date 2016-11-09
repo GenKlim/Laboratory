@@ -37,11 +37,10 @@ always @ (posedge CLK) begin
 			STATE <= STATE + 1;
 			TIMER <= T;
 		end else begin
-			if(TIMER != 4'h0) begin
-				if(TIMER == 4'h1)
+			if(TIMER != 0) begin
+				if(TIMER == 1)
 					IRQ <= 1;
-				
-				
+					
 				TIMER <= TIMER - 1;
 			end
 		end

@@ -34,6 +34,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Top.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Top.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Top.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Top_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Top_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_stx_beh.prj"/>
@@ -54,7 +55,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1478165778" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1478165778">
+    <transform xil_pn:end_ts="1478724656" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1478724656">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BEH.v"/>
@@ -73,30 +74,26 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1478165778" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1478165778">
+    <transform xil_pn:end_ts="1478724656" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1478724656">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BEH.v"/>
       <outfile xil_pn:name="Test.v"/>
       <outfile xil_pn:name="Top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1478165791" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7320930681891592451" xil_pn:start_ts="1478165788">
+    <transform xil_pn:end_ts="1478728384" xil_pn:in_ck="-2054923308973051122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7320930681891592451" xil_pn:start_ts="1478728382">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name="Test_beh.prj"/>
       <outfile xil_pn:name="Test_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1478167121" xil_pn:in_ck="5294144513667149265" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6216615795960433280" xil_pn:start_ts="1478167121">
+    <transform xil_pn:end_ts="1478728384" xil_pn:in_ck="5294144513667149265" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6216615795960433280" xil_pn:start_ts="1478728384">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Test_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -129,7 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1478075868" xil_pn:in_ck="3163332822314794" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-4740357871759867891" xil_pn:start_ts="1478075851">
+    <transform xil_pn:end_ts="1478724267" xil_pn:in_ck="3163332822314794" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-4740357871759867891" xil_pn:start_ts="1478724257">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -141,6 +138,7 @@
       <outfile xil_pn:name="Top.prj"/>
       <outfile xil_pn:name="Top.syr"/>
       <outfile xil_pn:name="Top.xst"/>
+      <outfile xil_pn:name="Top_beh.prj"/>
       <outfile xil_pn:name="Top_stx_beh.prj"/>
       <outfile xil_pn:name="Top_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>

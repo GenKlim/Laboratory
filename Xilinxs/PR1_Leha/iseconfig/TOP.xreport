@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-17T07:12:44</DateModified>
+  <DateModified>2016-11-09T15:41:10</DateModified>
   <ModuleName>TOP</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/admin/Desktop/Leha/iseconfig/TOP.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/admin/Desktop/Leha</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/admin/Documents/Laboratory/Xilinxs/PR1_Leha/iseconfig/TOP.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/admin/Documents/Laboratory/Xilinxs/PR1_Leha\</ImplementationReportsDirectory>
   <DateInitialized>2016-10-17T07:12:43</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
