@@ -119,7 +119,11 @@ public class fly implements MouseListener
     @Override
     public void mouseClicked(MouseEvent e) {
         if((e.getModifiers() & InputEvent.SHIFT_MASK) != 0) //Если зажат шифт
-            Instances.stream().forEach(f->f.setActive(true));   //Будим всех мух
+        {
+            //Instances.stream().forEach(f->f.setActive(true));   //Будим всех мух
+            for(fly i : Instances)
+                i.setActive(true);
+        }
         else
             setActive(!isActive()); // меняем состояние
     }

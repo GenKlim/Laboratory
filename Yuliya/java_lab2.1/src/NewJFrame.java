@@ -1,4 +1,5 @@
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +28,14 @@ public class NewJFrame extends javax.swing.JFrame
         
         initComponents();
         
-        activeTimer = new Timer(speed, (ActionEvent e) -> algStep());
+        //activeTimer = new Timer(speed, (ActionEvent e) -> algStep());
+        activeTimer = new Timer(speed, new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ev) {
+                 algStep();
+            }
+        });
+
         jList1.setModel(listmodel);
     }
     
