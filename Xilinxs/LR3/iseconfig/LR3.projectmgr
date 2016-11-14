@@ -94,13 +94,13 @@
          <ClosedNode>/asda C:|Users|admin|Documents|Visual Studio 2015|Projects|Laboratory|Xilinxs|LR3|asda.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CL1 - Code (C:/Users/admin/Documents/Laboratory/Xilinxs/LR3/BEH.v)</SelectedItem>
+         <SelectedItem>Test (C:/Users/admin/Documents/Laboratory/Xilinxs/LR3/Test.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000d1000000020000000000000000000000000200000064ffffffff000000810000000300000002000000d10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CL1 - Code (C:/Users/admin/Documents/Laboratory/Xilinxs/LR3/BEH.v)</CurrentItem>
+      <CurrentItem>Test (C:/Users/admin/Documents/Laboratory/Xilinxs/LR3/Test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
