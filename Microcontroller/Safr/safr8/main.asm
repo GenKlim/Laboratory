@@ -1,4 +1,4 @@
-.def temp = r17	//Биндим регистры
+.def temp = r17	//Р‘РёРЅРґРёРј СЂРµРіРёСЃС‚СЂС‹
 .def A = r18
 .def B = r19
 
@@ -6,10 +6,10 @@
 
 .cseg
 .org 0
-rjmp Init	//Начало программы
+rjmp Init	//РќР°С‡Р°Р»Рѕ РїСЂРѕРіСЂР°РјРјС‹
 
 Init:
-	//Распределение входов/выходов и установка начальных значений
+	//Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РІС…РѕРґРѕРІ/РІС‹С…РѕРґРѕРІ Рё СѓСЃС‚Р°РЅРѕРІРєР° РЅР°С‡Р°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№
 	ldi temp, 0x00
 	out DDRA, temp
 	out DDRB, temp
@@ -20,34 +20,34 @@ Init:
 	out PORTB, temp
 	rjmp LedReset
 
-//Основной цикл программы
+//РћСЃРЅРѕРІРЅРѕР№ С†РёРєР» РїСЂРѕРіСЂР°РјРјС‹
 Loop:
-	sbis PINA, 0	//Если кнопка 0 нажата
+	sbis PINA, 0	//Р•СЃР»Рё РєРЅРѕРїРєР° 0 РЅР°Р¶Р°С‚Р°
 	rjmp LedSet
 	sbis PINA, 1
-	rjmp LedReset	//Если кнопка 1 нажата
+	rjmp LedReset	//Р•СЃР»Рё РєРЅРѕРїРєР° 1 РЅР°Р¶Р°С‚Р°
 	rjmp Loop
 
-//Зажигает все диоды, кроме 1
+//Р—Р°Р¶РёРіР°РµС‚ РІСЃРµ РґРёРѕРґС‹, РєСЂРѕРјРµ 1
 LedSet:
-	in temp, PINB	//Чтение с порта
+	in temp, PINB	//Р§С‚РµРЅРёРµ СЃ РїРѕСЂС‚Р°
 	ldi A, 0x01
 	cpi temp, 0x00
 
-	LedSet_Shift:	//Сдвиг
+	LedSet_Shift:	//РЎРґРІРёРі
 		breq LedSet_End
 		ROL A
 		dec temp
 		brne LedSet_Shift
 		
 	LedSet_End:
-		andi A, 0xff	//Включение нужных диодов
+		andi A, 0xff	//Р’РєР»СЋС‡РµРЅРёРµ РЅСѓР¶РЅС‹С… РґРёРѕРґРѕРІ
 		com A
 		out PORTD, A
 
 	rjmp Loop
 
-//Зажигает все светодиоды
+//Р—Р°Р¶РёРіР°РµС‚ РІСЃРµ СЃРІРµС‚РѕРґРёРѕРґС‹
 LedReset:
 	ldi temp, 0xff
 	out PORTD, temp
