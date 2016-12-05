@@ -38,7 +38,10 @@ namespace lab5
         {
             Linear_Equation result = new Linear_Equation(a.CountX);
             for (int i = 0; i <= result.CountX; i++)
-                result[i] = a[i] + b[i];
+            {
+                double c = a[i] + b[i];
+                result[i] = Math.Abs(c) < 0.0001 ? 0 : c;
+            }
             return result;
         }
 
@@ -105,41 +108,44 @@ namespace lab5
             else return true;             
         }
 
-
-        public static bool operator true(Linear_Equation a)//это типа если уравненрие разрешимое, эта штука не работает
+        // Не факт что это то что нужно, забыл линал уже)
+        public static bool operator true(Linear_Equation a)
         {
-            double count = 0;
-            for (int i = 1; i <= a.CountX; i++)
+            for (int i = 0; i < a.CountX; i++)
             {
-                if (a[i] != 0) count++;
+                if (a[i] == 0)
+                    return false;
             }
-            if (count == 0 && a[0]!=0) return false;
-            else return true;
+
+            return true;
         }
 
-
-        public static bool operator false(Linear_Equation a)//это если противоречивое, тоже не работает
+        public static bool operator false(Linear_Equation a)
         {
-            double count = 0;
-            for (int i = 1; i <= a.CountX; i++)
+            for (int i = 0; i < a.CountX; i++)
             {
-                if (a[i] == 0) count++;
+                if (a[i] == 0)
+                    return true;
             }
-            if (count == a.CountX && a[0] != 0) return true;
-            else return false;
+
+            return false;
         }
 
         public override string ToString()
         {
             string s = "";
-            for (int i=1; i<=CountX; i++)
+            for (int i = 0; i < CountX; i++)
             {
-                if (this[i] >= 0 && i != 1) s += " + "; else
-                    if (this[i] < 0)
+                if (this[i] >= 0 && i != 0)
+                    s += " + ";
+                else if (this[i] < 0)
                     s += " - ";
-                s += Math.Abs(this[i]).ToString()+ "x_" + i.ToString();
+
+                s += string.Format("{0:##0.##}x_{1}", Math.Abs(this[i]), i);
+                // Запись {0:##0.##} означает, что число может иметь до 2х знаков после запятой и от 1 до 3х знаков перед запятой
+                // Если нужно подробней, вот статья https://msdn.microsoft.com/ru-ru/library/dwhawy9k(v=vs.110).aspx
             }
-            return s+" = "+this[0].ToString();
+            return string.Format("{0} = {1:##0.##}", s, this[CountX]);
         }
 
         public static explicit operator string(Linear_Equation a)

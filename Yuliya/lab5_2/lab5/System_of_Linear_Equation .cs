@@ -11,11 +11,15 @@ namespace lab5
         private Linear_Equation[] sle;
         private Linear_Equation le;
 
+        // Тип исключения
+        public class NotMathException: Exception
+        { }  
+
         public System_of_Linear_Equation(int n)
         {
             sle = new Linear_Equation[n];
-            
-            for (int i=0; i < CountX; i++)
+
+            for (int i = 0; i < CountX; i++)
             {
                 sle[i] = new Linear_Equation(n);
             }
@@ -47,26 +51,46 @@ namespace lab5
             return a.ToString();
         }
 
-        public System_of_Linear_Equation triangular_matrix()//неправильно работает
+        public System_of_Linear_Equation triangular_matrix()
         {
-
             //приведение матрицы к треугольному виду
 
-            for (int j = 1; j < CountX; j++)
+            for (int k = 0; k < CountX; k++)
             {
-                for (int i = j; i < CountX; i++)
+                for (int i = k + 1; i < CountX; i++)
                 {
-                    double m1 = this[i-1][j];
-                    double m2 = this[i][j];
-                    this[i] = this[i] * (m1 / m2);
-                    this[i] = this[i] - this[i-1];
+                    double kf = this[i][k] / this[k][k];
+                    this[i] -= this[k] * kf;
                 }
             }
 
             return this;
         }
 
-//решение методом гаусса, вывести массив одномерный
+        //Решение СЛАУ
+        //решение методом гаусса, вывести массив одномерный
+        public double[] Math()
+        {
+            var result = new double[CountX];
+
+            var trig_sys = triangular_matrix();
+            for (int i = CountX - 1; i >= 0; i--)
+            {
+                if (trig_sys[i][i] == 0)    // Теорема Кронекера-Капелли, вроде
+                    throw new NotMathException();    // Бросаем исключение
+
+                double b = trig_sys[i][CountX];
+
+                for (int j = i + 1; j < CountX; j++)
+                {
+                    b -= trig_sys[i][j] * result[j];
+                }
+
+                result[i] = b / trig_sys[i][i];
+            }
+            
+            return result;
+        }
 
     }
 }

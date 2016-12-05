@@ -26,6 +26,21 @@ namespace lab5
             Console.WriteLine("Приведение к треугольному виду:");
             Console.WriteLine("");
             Console.WriteLine((string)b.triangular_matrix());
+
+            Console.WriteLine("Решение СЛАУ:");
+
+            try
+            {
+                var result = b.Math();
+
+                for (int i = 0; i < b.CountX; i++)
+                    Console.WriteLine("x_{0} = {1}", i, result[i]);
+            }
+            catch(System_of_Linear_Equation.NotMathException) //Ловим исключение
+            {
+                Console.WriteLine("СЛАУ несовместна");
+            }
+
             Console.ReadKey();
         }
     }
