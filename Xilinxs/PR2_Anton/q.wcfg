@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/admin/Documents/Laboratory/Xilinxs/PR2_Anton/Test_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/Test/SEG" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEG[6:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/AN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AN[2:0]</obj_property>
+      <obj_property name="ObjectShortName">AN[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/CL3/ToDysplay" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ToDysplay[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ToDysplay[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/LED0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LED0</obj_property>
+      <obj_property name="ObjectShortName">LED0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/BTNC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTNC</obj_property>
+      <obj_property name="ObjectShortName">BTNC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/BTNR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTNR</obj_property>
+      <obj_property name="ObjectShortName">BTNR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/NOM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NOM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">NOM[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/BIT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/EL" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">EL[3:0]</obj_property>
+      <obj_property name="ObjectShortName">EL[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/BTN_IN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BTN_IN</obj_property>
+      <obj_property name="ObjectShortName">BTN_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/CL3/CEO" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CEO</obj_property>
+      <obj_property name="ObjectShortName">CEO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/CL3/NUM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NUM[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

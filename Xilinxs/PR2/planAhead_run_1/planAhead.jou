@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Sun Dec 11 02:08:28 2016
+# Process ID: 15972
+# Log file: C:/Users/admin/Documents/Laboratory/Xilinxs/PR2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/admin/Documents/Laboratory/Xilinxs/PR2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/admin/Documents/Laboratory/Xilinxs/PR2/pa.fromNetlist.tcl
