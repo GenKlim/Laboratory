@@ -1,0 +1,26 @@
+.label {
+    -fx-font-size: 34px;
+    -fx-text-fill: #555555;
+}
+
+.next {
+    -fx-text-fill: #000000;
+}
+
+.set {
+    -fx-text-fill: #2890DC;
+}
+
+.error {
+    -fx-background-color: #fd3f49;
+}
+
+.button {
+    -background-color: #ffffff;
+    -fx-background-color: -background-color;
+    -fx-border-color: #0f0f0f;
+    -fx-border-radius: 4;
+    -fx-padding: 2px;
+    -fx-border-insets: 2px;
+    -fx-background-insets: 2px;
+}

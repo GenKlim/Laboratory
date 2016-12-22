@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_keyboardfx" default="compile.module.keyboardfx">
+  <dirname property="module.keyboardfx.basedir" file="${ant.file.module_keyboardfx}"/>
+  
+  <property name="module.jdk.home.keyboardfx" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.keyboardfx" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.keyboardfx" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.keyboardfx" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="keyboardfx.output.dir" value="${module.keyboardfx.basedir}/out/production/KeyboardFX"/>
+  <property name="keyboardfx.testoutput.dir" value="${module.keyboardfx.basedir}/out/test/KeyboardFX"/>
+  
+  <path id="keyboardfx.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="keyboardfx.module.production.classpath">
+    <path refid="${module.jdk.classpath.keyboardfx}"/>
+    <path refid="library.json-simple-1.1.classpath"/>
+  </path>
+  
+  <path id="keyboardfx.runtime.production.module.classpath">
+    <pathelement location="${keyboardfx.output.dir}"/>
+    <path refid="library.json-simple-1.1.classpath"/>
+  </path>
+  
+  <path id="keyboardfx.module.classpath">
+    <path refid="${module.jdk.classpath.keyboardfx}"/>
+    <pathelement location="${keyboardfx.output.dir}"/>
+    <path refid="library.json-simple-1.1.classpath"/>
+  </path>
+  
+  <path id="keyboardfx.runtime.module.classpath">
+    <pathelement location="${keyboardfx.testoutput.dir}"/>
+    <pathelement location="${keyboardfx.output.dir}"/>
+    <path refid="library.json-simple-1.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.keyboardfx">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.keyboardfx">
+    <patternset refid="excluded.from.module.keyboardfx"/>
+  </patternset>
+  
+  <path id="keyboardfx.module.sourcepath">
+    <dirset dir="${module.keyboardfx.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.keyboardfx" depends="compile.module.keyboardfx.production,compile.module.keyboardfx.tests" description="Compile module KeyboardFX"/>
+  
+  <target name="compile.module.keyboardfx.production" depends="register.custom.compilers" description="Compile module KeyboardFX; production classes">
+    <mkdir dir="${keyboardfx.output.dir}"/>
+    <javac2 destdir="${keyboardfx.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.keyboardfx}/javac">
+      <compilerarg line="${compiler.args.keyboardfx}"/>
+      <bootclasspath refid="keyboardfx.module.bootclasspath"/>
+      <classpath refid="keyboardfx.module.production.classpath"/>
+      <src refid="keyboardfx.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.keyboardfx"/>
+    </javac2>
+    
+    <copy todir="${keyboardfx.output.dir}">
+      <fileset dir="${module.keyboardfx.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.keyboardfx.tests" depends="register.custom.compilers,compile.module.keyboardfx.production" description="compile module KeyboardFX; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.keyboardfx" description="cleanup module">
+    <delete dir="${keyboardfx.output.dir}"/>
+    <delete dir="${keyboardfx.testoutput.dir}"/>
+  </target>
+</project>

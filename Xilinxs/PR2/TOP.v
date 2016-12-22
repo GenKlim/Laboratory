@@ -21,6 +21,44 @@ initial begin
 	UPDATE_TIMER <= 3'b000;
 end
 
+
+
+
+always @(posedge CLK, posedge SE, posedge LD_CONST) begin
+	if(CLK) begin
+		if(SE)
+			myReg <= data;
+		else if (LD_CONST)
+			myReg <= 12'hE44;
+	end
+end
+
+wire [15:0] data_input;
+wire [15:0] data_output;
+
+reg [15:0] data;
+
+always @(posedge CLK)
+	if(LD_CONST)
+		data <= 16'h12C7;
+	else if(WE)
+		data <= data_input;
+	else if(SHIFT)
+		data <= {data[14:0], data[15]};
+
+assign data = data_output;
+	
+reg D_tr;
+
+always @(gate_in, resert_in, data_in, setOne)
+	if(reset_in)
+		D_tr <= 1'b0;
+	else if(setOne)
+		D_tr <= 1'b1;
+	else if(gate_in)
+		D_tr <= data_in;
+	
+
 always @ (posedge CLK, posedge BTNR) begin
 	if(BTNR) begin
 		STATE <= 2'h0;
