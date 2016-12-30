@@ -1,198 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="mainBox" maxHeight="560.0" maxWidth="1280.0" prefHeight="500.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Keyboard.MainController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Keyboard.MainController">
    <children>
-      <SplitPane dividerPositions="0.7508710801393729" focusTraversable="false">
-         <items>
-            <GridPane fx:id="btnContainers" alignment="center" focusTraversable="true" hgap="10" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" stylesheets="@style.css" vgap="10">
-               <columnConstraints>
-                  <ColumnConstraints minWidth="620.0" prefWidth="10000.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="100.0" />
-                  <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" />
-                  <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
-                  <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
-                  <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
-                  <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
-                  <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
-               </rowConstraints>
+      <VBox fx:id="mainBox" maxHeight="560.0" maxWidth="1280.0" prefHeight="500.0" prefWidth="1150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.7508710801393729" focusTraversable="false">
+               <items>
+                  <GridPane fx:id="btnContainers" alignment="center" focusTraversable="true" hgap="10" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" stylesheets="@style.css" vgap="10">
+                     <columnConstraints>
+                        <ColumnConstraints minWidth="620.0" prefWidth="10000.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="100.0" />
+                        <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" />
+                        <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
+                        <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
+                        <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
+                        <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
+                        <RowConstraints maxHeight="50.0" minHeight="35.0" prefHeight="50.0" />
+                     </rowConstraints>
+                     <children>
+                        <FlowPane fx:id="printBox" alignment="CENTER" columnHalignment="CENTER" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_QUOTE" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT1" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT2" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT3" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT4" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT5" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT6" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT7" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT8" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT9" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT0" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="MINUS" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="EQUALS" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_SPACE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000.0" prefWidth="1026.0" text="TAB" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Q" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="W" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="E" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="R" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="T" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Y" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="U" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="I" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="O" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="P" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="OPEN_BRACKET" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="CLOSE_BRACKET" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_SLASH" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000.0" prefWidth="1050.0" text="CAPS" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="A" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="S" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="D" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="F" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="G" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="H" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="J" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="K" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="L" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="SEMICOLON" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="QUOTE" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000.0" prefWidth="1050.0" text="ENTER" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <children>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" opacity="0.41" prefHeight="1000" prefWidth="1065.0" text="SHIFT" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Z" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="X" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="C" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="V" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="B" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="N" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="M" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="COMMA" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="PERIOD" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="SLASH" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1065.0" text="SHIFT" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+                           <children>
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" opacity="0.41" prefHeight="1000" prefWidth="1000" text="CONTROL" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" opacity="0.41" prefHeight="1000" prefWidth="1000" text="ALT" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1400.0" text="SPACE" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="ALT" />
+                              <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="CONTROL" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="statusLabel" focusTraversable="false" text="Status" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox prefHeight="385.0" prefWidth="279.0">
+                      <children>
+                        <Label focusTraversable="false" prefWidth="70.0" text="Раскладка:">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <Button fx:id="localeBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onChangeLang" prefWidth="1000.0" text="Locale" />
+                              <ToggleButton fx:id="capsBtn" focusTraversable="false" mnemonicParsing="false" prefWidth="1000.0" text="Caps" />
+                           </children>
+                        </HBox>
+                        <Label focusTraversable="false" prefHeight="17.0" prefWidth="191.0" text="Настройки:">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                      <ToggleButton fx:id="autoBackspaceBtn" focusTraversable="false" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" prefWidth="1000.0" styleClass="ToggleButton" text="Автоматическое удаление неверного символа" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ToggleButton>
+                      <ToggleButton fx:id="multiPhraseBtn" focusTraversable="false" layoutX="10.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Повторять одно слово" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                      <ToggleButton fx:id="useRegBtn" focusTraversable="false" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Учитывать регистр" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                      <ToggleButton fx:id="useTimeBtn" focusTraversable="false" layoutX="10.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Печать на скорость" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <Label focusTraversable="false" prefHeight="17.0" prefWidth="183.0" text="Лимит времени:">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <Slider fx:id="timeLimitSlider" focusTraversable="false" max="360.0" min="1.0" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" prefWidth="1000.0" value="60.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="2.0" />
+                                 </HBox.margin>
+                              </Slider>
+                              <Label fx:id="timeLimitLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" text="60">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label focusTraversable="false" prefHeight="17.0" prefWidth="157.0" text="Количество элементов:">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <Slider fx:id="phraseCountSlider" focusTraversable="false" max="20.0" min="1.0" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" prefWidth="1000.0" value="5.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="2.0" />
+                                 </HBox.margin>
+                              </Slider>
+                              <Label fx:id="phraseCountLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" text="5">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label focusTraversable="false" prefWidth="70.0" text="Сложность:">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ToggleButton fx:id="difSingleBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Отдельные буквы" />
+                        <ToggleButton fx:id="difSimpleBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Короткие слова" />
+                        <ToggleButton fx:id="difNormalBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Средние слова" />
+                        <ToggleButton fx:id="difStrongBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Длинные слова" />
+                        <ToggleButton fx:id="difTextBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Текст" />
+                      </children>
+                          </VBox>
+               </items>
+            </SplitPane>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#onRestartClick" prefWidth="10000.0" text="Сброс">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TitledPane fx:id="messagePane" animated="false" collapsible="false" focusTraversable="false" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased"  layoutX="838.0" layoutY="319.0" onMousePressed="#onMessageClick" prefHeight="177.0" prefWidth="306.0" text="Text" visible="false" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" onMousePressed="#onMessageClick" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <FlowPane fx:id="printBox" alignment="CENTER" columnHalignment="CENTER" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-                     <children>
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_QUOTE" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT1" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT2" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT3" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT4" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT5" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT6" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT7" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT8" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT9" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="DIGIT0" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="MINUS" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="EQUALS" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_SPACE" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
-                     <children>
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000.0" prefWidth="1026.0" text="TAB" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Q" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="W" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="E" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="R" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="T" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Y" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="U" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="I" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="O" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="P" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="OPEN_BRACKET" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="CLOSE_BRACKET" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="BACK_SLASH" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
-                     <children>
-                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="1000.0" prefWidth="1050.0" text="CAPS" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="A" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="S" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="D" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="F" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="G" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="H" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="J" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="K" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="L" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="SEMICOLON" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="QUOTE" />
-                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="1000.0" prefWidth="1050.0" text="ENTER" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
-                     <children>
-                        <Button focusTraversable="false" mnemonicParsing="false" opacity="0.41" prefHeight="1000" prefWidth="1065.0" text="SHIFT" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="Z" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="X" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="C" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="V" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="B" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="N" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="M" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="COMMA" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="PERIOD" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1000" text="SLASH" />
-                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="1000" prefWidth="1065.0" text="SHIFT" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
-                     <children>
-                        <Button focusTraversable="false" mnemonicParsing="false" opacity="0.41" prefHeight="1000" prefWidth="1000" text="CONTROL" />
-                        <Button focusTraversable="false" mnemonicParsing="false" opacity="0.41" prefHeight="1000" prefWidth="1000" text="ALT" />
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#onKeyClick" prefHeight="1000" prefWidth="1400.0" text="SPACE" />
-                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="1000" prefWidth="1000" text="ALT" />
-                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="1000" prefWidth="1000" text="CONTROL" />
-                     </children>
-                  </HBox>
-                  <Label fx:id="statusLabel" focusTraversable="false" text="Status" GridPane.rowIndex="1">
+                  <Label fx:id="messageLabel" alignment="TOP_LEFT" layoutX="5.0" layoutY="11.0" onMousePressed="#onMessageClick" text="Text" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font name="Arial" size="15.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </GridPane>
-            <VBox prefHeight="385.0" prefWidth="279.0">
-                <children>
-                  <Label focusTraversable="false" prefWidth="70.0" text="Раскладка:">
-                     <VBox.margin>
-                        <Insets bottom="3.0" left="5.0" top="7.0" />
-                     </VBox.margin>
-                  </Label>
-                  <HBox>
-                     <children>
-                        <Button fx:id="localeBtn" focusTraversable="false" mnemonicParsing="false" onAction="#onChangeLang" prefWidth="1000.0" text="Locale" />
-                        <ToggleButton fx:id="capsBtn" focusTraversable="false" mnemonicParsing="false" prefWidth="1000.0" text="Caps" />
-                     </children>
-                  </HBox>
-                  <Label focusTraversable="false" prefHeight="17.0" prefWidth="191.0" text="Настройки:">
-                     <VBox.margin>
-                        <Insets bottom="3.0" left="5.0" top="7.0" />
-                     </VBox.margin>
-                  </Label>
-                <ToggleButton fx:id="autoBackspaceBtn" focusTraversable="false" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" prefWidth="1000.0" styleClass="ToggleButton" text="Автоматическое удаление неверного символа" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin></ToggleButton>
-                <ToggleButton fx:id="multiPhraseBtn" focusTraversable="false" layoutX="10.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Повторять одно слово" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                <ToggleButton fx:id="useRegBtn" focusTraversable="false" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Учитывать регистр" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                <ToggleButton fx:id="useTimeBtn" focusTraversable="false" layoutX="10.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Печать на скорость" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                  <Label focusTraversable="false" prefHeight="17.0" prefWidth="183.0" text="Лимит времени:">
-                     <VBox.margin>
-                        <Insets bottom="3.0" left="5.0" top="7.0" />
-                     </VBox.margin>
-                  </Label>
-                  <HBox>
-                     <children>
-                        <Slider fx:id="timeLimitSlider" focusTraversable="false" max="360.0" min="1.0" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" prefWidth="1000.0" value="60.0">
-                           <HBox.margin>
-                              <Insets left="4.0" top="2.0" />
-                           </HBox.margin></Slider>
-                        <Label fx:id="timeLimitLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" text="60">
-                           <HBox.margin>
-                              <Insets right="5.0" />
-                           </HBox.margin></Label>
-                     </children>
-                  </HBox>
-                  <Label focusTraversable="false" prefHeight="17.0" prefWidth="157.0" text="Количество слов:">
-                     <VBox.margin>
-                        <Insets bottom="3.0" left="5.0" top="7.0" />
-                     </VBox.margin>
-                  </Label>
-                  <HBox>
-                     <children>
-                        <Slider fx:id="phraseCountSlider" focusTraversable="false" max="20.0" min="1.0" onKeyPressed="#onKeyPress" onKeyReleased="#OnKeyReleased" prefWidth="1000.0" value="5.0">
-                           <HBox.margin>
-                              <Insets left="4.0" top="2.0" />
-                           </HBox.margin></Slider>
-                        <Label fx:id="phraseCountLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" text="5">
-                           <HBox.margin>
-                              <Insets right="5.0" />
-                           </HBox.margin></Label>
-                     </children>
-                  </HBox>
-                  <Label focusTraversable="false" prefWidth="70.0" text="Сложность:">
-                     <VBox.margin>
-                        <Insets bottom="3.0" left="5.0" top="7.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ToggleButton fx:id="difSingleBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Отдельные буквы" />
-                  <ToggleButton fx:id="difSimpleBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Короткие слова" />
-                  <ToggleButton fx:id="difNormalBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Средние слова" />
-                  <ToggleButton fx:id="difStrongBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Длинные слова" />
-                  <ToggleButton fx:id="difTextBtn" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="1000.0" styleClass="ToggleButton" text="Текст" />
-                </children>
-                    </VBox>
-         </items>
-      </SplitPane>
-      <Button focusTraversable="false" mnemonicParsing="false" onAction="#onRestartClick" prefWidth="10000.0" text="Сброс">
-         <font>
-            <Font name="Arial" size="22.0" />
-         </font>
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </Button>
+            </AnchorPane>
+        </content>
+         <effect>
+            <DropShadow offsetX="2.0" offsetY="0.02" />
+         </effect>
+      </TitledPane>
    </children>
-</VBox>
+</AnchorPane>

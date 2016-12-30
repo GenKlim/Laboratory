@@ -32,6 +32,7 @@ public class MainController implements Initializable
 	private int level;
 	private Timeline timer;
 	private boolean timerRun;
+	private int errorCount;
 
 	@FXML VBox mainBox;
 	@FXML FlowPane printBox;
@@ -52,6 +53,8 @@ public class MainController implements Initializable
 	@FXML Label phraseCountLabel;
 	@FXML Slider timeLimitSlider;
 	@FXML Slider phraseCountSlider;
+	@FXML TitledPane messagePane;
+	@FXML Label messageLabel;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
@@ -212,6 +215,7 @@ public class MainController implements Initializable
 	{
 		printBox.getStyleClass().remove("error");
 		charCount = 0;
+		errorCount = 0;
 		statusLabel.setText("");
 		activeTask = new Task(printBox);
 
@@ -268,7 +272,7 @@ public class MainController implements Initializable
 		{
 			charCount++;
 			updateStatus();
-		}
+		} else if(code == 1) errorCount++;
 
 		Button btn = keyboard.getOrDefault(key, null);
 		if(btn != null)
@@ -309,6 +313,21 @@ public class MainController implements Initializable
 	private void nextTask()
 	{
 		int temp = charCount;
+
+		String assessment;
+		long time = (System.currentTimeMillis() - startTime) / 1000;
+		int speed = (int) ((60.0f * charCount) / (float) time);
+		float k = time == 0 ? 1 : (1 - timeLimit / time) * (1 - errorCount / charCount);
+
+		if(k > .9) assessment = "Отлично!";
+		else if(k > .65) assessment = "Хорошо!";
+		else if(k > .3) assessment = "Удовлетворительно";
+		else assessment = "Плохо!";
+
+		String stats = String.format("За %d секунд Вы ввели %d символов и допустили %d ощибок\nСкорость вашей печати %d символов в минуту", time, charCount, errorCount, speed);
+
+		showMessage(assessment, stats);
+
 		onRestartClick(null);
 		charCount = temp + 1;
 		level++;
@@ -322,7 +341,20 @@ public class MainController implements Initializable
 		}
 
 		updateStatus();
-}
+	}
+
+	private void showMessage(String caption, String message)
+	{
+		messageLabel.setText(message);
+		messagePane.setText(caption);
+		messagePane.setVisible(true);
+	}
+
+	@FXML
+	void onMessageClick(MouseEvent event)
+	{
+		messagePane.setVisible(false);
+	}
 
 	@FXML
 	public void OnKeyReleased(KeyEvent keyEvent)
