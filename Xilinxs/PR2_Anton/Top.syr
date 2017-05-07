@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: Top.prj
 
@@ -179,7 +179,7 @@ Unit <Filter> synthesized.
 
 Synthesizing Unit <EL_Decoder>.
     Related source file is "C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Anton\EL_Decoder.v".
-    Found 16x4-bit Read Only RAM for signal <EL>
+    Found 16x4-bit Read Only RAM for signal <Y>
     Summary:
 	inferred   1 RAM(s).
 Unit <EL_Decoder> synthesized.
@@ -263,7 +263,7 @@ The following registers are absorbed into counter <STATE>: 1 register on signal 
 Unit <Divider> synthesized (advanced).
 
 Synthesizing (advanced) Unit <EL_Decoder>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_EL> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Y> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -272,7 +272,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_EL> will be implemented on LUTs eith
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <NOM>           |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <EL>            |          |
+    |     doA            | connected to signal <Y>             |          |
     -----------------------------------------------------------------------
 Unit <EL_Decoder> synthesized (advanced).
 
@@ -463,7 +463,7 @@ Speed Grade: -3
 
    Minimum period: 2.236ns (Maximum Frequency: 447.167MHz)
    Minimum input arrival time before clock: 1.117ns
-   Maximum output required time after clock: 1.463ns
+   Maximum output required time after clock: 1.458ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -585,21 +585,21 @@ Offset:              1.322ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 6 / 1
 -------------------------------------------------------------------------
-Offset:              1.463ns (Levels of Logic = 2)
-  Source:            NOM_1 (FF)
+Offset:              1.458ns (Levels of Logic = 2)
+  Source:            NOM_0 (FF)
   Destination:       LED0 (PAD)
   Source Clock:      CLK rising
 
-  Data Path: NOM_1 to LED0
+  Data Path: NOM_0 to LED0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             8   0.361   0.725  NOM_1 (NOM_1)
-     LUT6:I0->O            1   0.097   0.279  Mmux_LED011 (LED0_OBUF)
+     FDCE:C->Q             9   0.361   0.720  NOM_0 (NOM_0)
+     LUT6:I1->O            1   0.097   0.279  Mmux_LED011 (LED0_OBUF)
      OBUF:I->O                 0.000          LED0_OBUF (LED0)
     ----------------------------------------
-    Total                      1.463ns (0.458ns logic, 1.005ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      1.458ns (0.458ns logic, 1.000ns route)
+                                       (31.4% logic, 68.6% route)
 
 =========================================================================
 
@@ -612,7 +612,7 @@ Clock to Setup on destination clock CL3/CEO
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 CL3/CEO        |    1.268|         |         |         |
-CLK            |    1.589|         |         |         |
+CLK            |    1.584|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK
@@ -626,12 +626,12 @@ CLK            |    2.236|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.51 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.82 secs
  
 --> 
 
-Total memory usage is 409704 kilobytes
+Total memory usage is 410684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

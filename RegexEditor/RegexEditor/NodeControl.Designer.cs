@@ -1,13 +1,13 @@
-﻿namespace lab8
+﻿namespace RegexEditor
 {
-    partial class Form1
+    partial class NodeControl
     {
-        /// <summary>
+        /// <summary> 
         /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Освободить все используемые ресурсы.
         /// </summary>
         /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
@@ -20,35 +20,30 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Код, автоматически созданный конструктором компонентов
 
-        /// <summary>
+        /// <summary> 
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.SuspendLayout();
             // 
-            // sqlConnection1
+            // NodeControl
             // 
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 367);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "NodeControl";
+            this.Size = new System.Drawing.Size(147, 148);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Data.SqlClient.SqlConnection sqlConnection1;
+        
     }
 }
-
