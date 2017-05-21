@@ -49,6 +49,7 @@
             this.q3 = new AutomaticRecognizer.NodeControl();
             this.q0 = new AutomaticRecognizer.NodeControl();
             this.q1 = new AutomaticRecognizer.NodeControl();
+            this.button_chek = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.viewport1.SuspendLayout();
@@ -61,7 +62,7 @@
             this.text_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.text_input.Location = new System.Drawing.Point(12, 37);
             this.text_input.Name = "text_input";
-            this.text_input.Size = new System.Drawing.Size(675, 29);
+            this.text_input.Size = new System.Drawing.Size(501, 29);
             this.text_input.TabIndex = 3;
             this.text_input.Text = "a00aa0aba1aa0a1";
             this.text_input.TextChanged += new System.EventHandler(this.button_reset_Click);
@@ -70,9 +71,9 @@
             // 
             this.button_step.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_step.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_step.Location = new System.Drawing.Point(693, 37);
+            this.button_step.Location = new System.Drawing.Point(519, 37);
             this.button_step.Name = "button_step";
-            this.button_step.Size = new System.Drawing.Size(141, 29);
+            this.button_step.Size = new System.Drawing.Size(139, 29);
             this.button_step.TabIndex = 4;
             this.button_step.Text = "Шаг";
             this.button_step.UseVisualStyleBackColor = true;
@@ -82,9 +83,9 @@
             // 
             this.button_reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_reset.Location = new System.Drawing.Point(840, 37);
+            this.button_reset.Location = new System.Drawing.Point(809, 37);
             this.button_reset.Name = "button_reset";
-            this.button_reset.Size = new System.Drawing.Size(79, 29);
+            this.button_reset.Size = new System.Drawing.Size(110, 29);
             this.button_reset.TabIndex = 5;
             this.button_reset.Text = "Сброс";
             this.button_reset.UseVisualStyleBackColor = true;
@@ -285,11 +286,24 @@
             this.q1.Size = new System.Drawing.Size(48, 48);
             this.q1.TabIndex = 0;
             // 
+            // button_chek
+            // 
+            this.button_chek.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_chek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_chek.Location = new System.Drawing.Point(664, 37);
+            this.button_chek.Name = "button_chek";
+            this.button_chek.Size = new System.Drawing.Size(139, 29);
+            this.button_chek.TabIndex = 10;
+            this.button_chek.Text = "Проверить";
+            this.button_chek.UseVisualStyleBackColor = true;
+            this.button_chek.Click += new System.EventHandler(this.button_chek_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 696);
+            this.Controls.Add(this.button_chek);
             this.Controls.Add(this.viewport1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -331,6 +345,7 @@
         private NodeControl q6;
         private NodeControl q5;
         private NodeControl q4;
+        private System.Windows.Forms.Button button_chek;
     }
 }
 

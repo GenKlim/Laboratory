@@ -55,6 +55,24 @@ namespace AutomaticRecognizer
             q7.ConnectTo(q2, "a");
         }
 
+        private void button_chek_Click(object sender, EventArgs e)
+        {
+            NodeControl current = rootNode;
+
+            foreach(var c in text_input.Text)
+            {
+                current = current.Joins.Find(j => j.Label.Contains(c)).To;
+
+                if(current == null)
+                    break;
+            }
+
+            if (current == endNode)
+                MessageBox.Show("Введенное вырыжение входит в язык");
+            else
+                MessageBox.Show("Введенное вырыжение не входит в язык");
+        }
+
         // Исполнитеть автомата
         private void button_step_Click(object sender, EventArgs e)
         {
