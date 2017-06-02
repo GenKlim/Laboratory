@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/admin/Documents/Laboratory/Xilinxs/TA_LR_1/Test_D_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test_D" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="/Test_D/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus10" type="vbus" db_ref_id="1">
+      <obj_property name="label">State</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/Test_D/uut/A" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">A</obj_property>
+         <obj_property name="ObjectShortName">A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Test_D/uut/B" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">B</obj_property>
+         <obj_property name="ObjectShortName">B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Test_D/uut/C" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C</obj_property>
+         <obj_property name="ObjectShortName">C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Test_D/uut/D" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">D</obj_property>
+         <obj_property name="ObjectShortName">D</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Test_D/uut/E" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">E</obj_property>
+         <obj_property name="ObjectShortName">E</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

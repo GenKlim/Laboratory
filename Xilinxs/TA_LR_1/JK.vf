@@ -1,0 +1,155 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : JK.vf
+// /___/   /\     Timestamp : 05/26/2017 22:49:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/admin/Documents/Laboratory/Xilinxs/TA_LR_1/JK.vf -w C:/Users/admin/Documents/Laboratory/Xilinxs/TA_LR_1/JK.sch
+//Design Name: JK
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_JK(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module JK(CLK);
+
+    input CLK;
+   
+   wire A;
+   wire B;
+   wire C;
+   wire D;
+   wire E;
+   wire XLXN_141;
+   wire XLXN_143;
+   wire XLXN_144;
+   wire XLXN_146;
+   wire XLXN_147;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_159;
+   wire XLXN_160;
+   wire XLXN_161;
+   wire XLXN_242;
+   wire XLXN_243;
+   wire XLXN_245;
+   wire XLXN_246;
+   
+   NOR4B3  XLXI_1 (.I0(E), 
+                  .I1(C), 
+                  .I2(B), 
+                  .I3(D), 
+                  .O(XLXN_144));
+   INV  XLXI_3 (.I(XLXN_141), 
+               .O(XLXN_146));
+   NOR3B1  XLXI_4 (.I0(C), 
+                  .I1(D), 
+                  .I2(E), 
+                  .O(XLXN_141));
+   (* HU_SET = "XLXI_7_0" *) 
+   FJKC_HXILINX_JK #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+                           .CLR(), 
+                           .J(XLXN_144), 
+                           .K(XLXN_143), 
+                           .Q(A));
+   OR2B1  XLXI_11 (.I0(A), 
+                  .I1(A), 
+                  .O(XLXN_143));
+   (* HU_SET = "XLXI_12_1" *) 
+   FJKC_HXILINX_JK #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+                            .CLR(), 
+                            .J(XLXN_146), 
+                            .K(XLXN_146), 
+                            .Q(B));
+   (* HU_SET = "XLXI_13_2" *) 
+   FJKC_HXILINX_JK #( .INIT(1'b0) ) XLXI_13 (.C(CLK), 
+                            .CLR(), 
+                            .J(XLXN_157), 
+                            .K(XLXN_157), 
+                            .Q(C));
+   (* HU_SET = "XLXI_14_4" *) 
+   FJKC_HXILINX_JK #( .INIT(1'b0) ) XLXI_14 (.C(CLK), 
+                            .CLR(), 
+                            .J(XLXN_158), 
+                            .K(XLXN_159), 
+                            .Q(D));
+   (* HU_SET = "XLXI_15_3" *) 
+   FJKC_HXILINX_JK #( .INIT(1'b0) ) XLXI_15 (.C(CLK), 
+                            .CLR(), 
+                            .J(XLXN_246), 
+                            .K(XLXN_245), 
+                            .Q(E));
+   INV  XLXI_18 (.I(XLXN_147), 
+                .O(XLXN_157));
+   INV  XLXI_29 (.I(E), 
+                .O(XLXN_158));
+   NOR2  XLXI_32 (.I0(D), 
+                 .I1(E), 
+                 .O(XLXN_147));
+   NOR2B1  XLXI_33 (.I0(E), 
+                   .I1(C), 
+                   .O(XLXN_160));
+   NOR2B1  XLXI_34 (.I0(E), 
+                   .I1(B), 
+                   .O(XLXN_161));
+   NOR2  XLXI_35 (.I0(XLXN_161), 
+                 .I1(XLXN_160), 
+                 .O(XLXN_159));
+   NOR3B3  XLXI_85 (.I0(D), 
+                   .I1(C), 
+                   .I2(B), 
+                   .O(XLXN_243));
+   INV  XLXI_86 (.I(A), 
+                .O(XLXN_242));
+   INV  XLXI_87 (.I(XLXN_243), 
+                .O(XLXN_245));
+   NOR2  XLXI_93 (.I0(XLXN_243), 
+                 .I1(XLXN_242), 
+                 .O(XLXN_246));
+endmodule

@@ -1,0 +1,161 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Main.vf
+// /___/   /\     Timestamp : 05/26/2017 22:04:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog C:/Users/admin/Documents/Laboratory/Xilinxs/TA_LR_1/Main.vf -w C:/Users/admin/Documents/Laboratory/Xilinxs/TA_LR_1/Main.sch
+//Design Name: Main
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Main(Clock, 
+            A, 
+            B, 
+            C, 
+            D, 
+            E);
+
+    input Clock;
+   output A;
+   output B;
+   output C;
+   output D;
+   output E;
+   
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_85;
+   wire A_DUMMY;
+   wire B_DUMMY;
+   wire C_DUMMY;
+   wire D_DUMMY;
+   wire E_DUMMY;
+   
+   assign A = A_DUMMY;
+   assign B = B_DUMMY;
+   assign C = C_DUMMY;
+   assign D = D_DUMMY;
+   assign E = E_DUMMY;
+   NAND4B1  XLXI_12 (.I0(D_DUMMY), 
+                    .I1(E_DUMMY), 
+                    .I2(C_DUMMY), 
+                    .I3(B_DUMMY), 
+                    .O(XLXN_19));
+   NAND3B1  XLXI_13 (.I0(B_DUMMY), 
+                    .I1(C_DUMMY), 
+                    .I2(E_DUMMY), 
+                    .O(XLXN_20));
+   NAND3B1  XLXI_14 (.I0(B_DUMMY), 
+                    .I1(C_DUMMY), 
+                    .I2(D_DUMMY), 
+                    .O(XLXN_21));
+   NAND2B1  XLXI_15 (.I0(C_DUMMY), 
+                    .I1(B_DUMMY), 
+                    .O(XLXN_22));
+   NAND4  XLXI_16 (.I0(XLXN_23), 
+                  .I1(XLXN_22), 
+                  .I2(XLXN_21), 
+                  .I3(XLXN_20), 
+                  .O(XLXN_24));
+   NAND3B2  XLXI_17 (.I0(E_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .I2(B_DUMMY), 
+                    .O(XLXN_23));
+   NAND3B2  XLXI_18 (.I0(E_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .I2(C_DUMMY), 
+                    .O(XLXN_28));
+   NAND2B1  XLXI_19 (.I0(C_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .O(XLXN_27));
+   NAND2B1  XLXI_20 (.I0(C_DUMMY), 
+                    .I1(E_DUMMY), 
+                    .O(XLXN_26));
+   NAND3  XLXI_21 (.I0(XLXN_28), 
+                  .I1(XLXN_27), 
+                  .I2(XLXN_26), 
+                  .O(XLXN_25));
+   NAND3  XLXI_22 (.I0(XLXN_32), 
+                  .I1(XLXN_30), 
+                  .I2(XLXN_29), 
+                  .O(XLXN_33));
+   NAND2B2  XLXI_23 (.I0(E_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .O(XLXN_29));
+   NAND3B1  XLXI_25 (.I0(B_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .I2(E_DUMMY), 
+                    .O(XLXN_30));
+   NAND3B1  XLXI_26 (.I0(C_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .I2(E_DUMMY), 
+                    .O(XLXN_32));
+   NAND3B3  XLXI_27 (.I0(E_DUMMY), 
+                    .I1(D_DUMMY), 
+                    .I2(A_DUMMY), 
+                    .O(XLXN_35));
+   NAND3B2  XLXI_29 (.I0(E_DUMMY), 
+                    .I1(C_DUMMY), 
+                    .I2(D_DUMMY), 
+                    .O(XLXN_37));
+   NAND4  XLXI_30 (.I0(E_DUMMY), 
+                  .I1(D_DUMMY), 
+                  .I2(C_DUMMY), 
+                  .I3(B_DUMMY), 
+                  .O(XLXN_38));
+   NAND4  XLXI_31 (.I0(XLXN_38), 
+                  .I1(XLXN_37), 
+                  .I2(XLXN_36), 
+                  .I3(XLXN_35), 
+                  .O(XLXN_39));
+   FD #( .INIT(1'b0) ) XLXI_84 (.C(Clock), 
+               .D(XLXN_85), 
+               .Q(A_DUMMY));
+   FD #( .INIT(1'b0) ) XLXI_85 (.C(Clock), 
+               .D(XLXN_24), 
+               .Q(B_DUMMY));
+   FD #( .INIT(1'b0) ) XLXI_87 (.C(Clock), 
+               .D(XLXN_25), 
+               .Q(C_DUMMY));
+   FD #( .INIT(1'b0) ) XLXI_88 (.C(Clock), 
+               .D(XLXN_33), 
+               .Q(D_DUMMY));
+   FD #( .INIT(1'b0) ) XLXI_89 (.C(Clock), 
+               .D(XLXN_39), 
+               .Q(E_DUMMY));
+   NAND3B2  XLXI_90 (.I0(E_DUMMY), 
+                    .I1(B_DUMMY), 
+                    .I2(D_DUMMY), 
+                    .O(XLXN_36));
+   INV  XLXI_91 (.I(XLXN_19), 
+                .O(XLXN_85));
+endmodule

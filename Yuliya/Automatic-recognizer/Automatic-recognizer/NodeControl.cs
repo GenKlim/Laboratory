@@ -7,26 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections;
 
-namespace AutomaticRecognizer
+namespace Automatic_recognizer
 {
     public partial class NodeControl : UserControl
     {
-        public List<NodeJoin> Joins;
-        private bool isActive;
+        //контроль узла графа
 
-        public bool IsActive
-        {
-            get => isActive;
-            set
-            {
-                isActive = value;
-                Invalidate();
-            }
-        }
+        public List <NodeJoin> Joins;//массив из связей
+        private bool isActive;//активно ли состояние
 
-        public NodeControl()
+        public NodeControl()//конструктор
         {
             Joins = new List<NodeJoin>();
             InitializeComponent();
@@ -35,13 +26,22 @@ namespace AutomaticRecognizer
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
+        public bool IsActive
+        {
+            get { return isActive; }//считать
+            set//установить
+            {
+                isActive = value;
+                Invalidate();
+            }
+        }
         public void ConnectTo(NodeControl To, string Label)
         {
             Joins.Add(new NodeJoin()
             {
-                In = this,
-                To = To,
-                Label = Label
+                In = this,//откуда - текущее состояние
+                To = To,//куда - что указано в параметрах метода
+                Label = Label//подпись
             });
         }
 
@@ -49,18 +49,21 @@ namespace AutomaticRecognizer
         {
             ButtonRenderer.DrawParentBackground(e.Graphics, e.ClipRectangle, this);
 
-            Color backColor = IsActive ? Color.LawnGreen : SystemColors.Control;
+            Color backColor;//цвет узла графа (состояния)
+            if (IsActive)//если состояние активно
+                backColor = Color.Orange;
+            else//если не активно
+                backColor = Color.PapayaWhip;
 
             e.Graphics.FillEllipse(new SolidBrush(backColor), 1, 1, Width - 2, Height - 2);
-
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             e.Graphics.DrawEllipse(new Pen(Color.Black, 2), 1, 1, Width - 3, Height - 3);
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
 
-            var textSize = e.Graphics.MeasureString(Name, Font);
-            e.Graphics.DrawString(Name, Font, new SolidBrush(ForeColor),
-                Width / 2 - textSize.Width / 2,
-                Height / 2 - textSize.Height / 2);
+            var textSize = e.Graphics.MeasureString(Name, Font);//возвращает величину строки в пикселях
+            e.Graphics.DrawString(Name, Font, new SolidBrush(ForeColor), Width / 2 - textSize.Width / 2, Height / 2 - textSize.Height / 2);
         }
+
+
     }
 }
