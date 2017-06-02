@@ -26,38 +26,42 @@ namespace Automatic_recognizer
         private async void button1_Click(object sender, EventArgs e)
         {
             string text = textBox1.Text;
-            endNode = q7;
-            CurrentNode = q0;
-            CurrentNode.IsActive = true;
+
+            var nextNode = q0;
+            CurrentPosition = 0;
+
             await Task.Delay(1000);
-            while (CurrentPosition < text.Length && CurrentNode != null)//пока не кончились символы и состояние не пустое
+
+            while (CurrentPosition < text.Length && nextNode != null)//пока не кончились символы и состояние не пустое
             {
                 textBox2.Text = text[CurrentPosition].ToString();
-                CurrentNode = SetCurrentNode(CurrentNode);//выбираем новое состояние 
-                if (CurrentNode != null)
-                {
-                    CurrentNode.IsActive = true;
-                    await Task.Delay(1000);
-                    viewport1.Invalidate();
-                }
-                else break;
+                nextNode = SetCurrentNode(nextNode);//выбираем новое состояние 
+                CurrentPosition++; //увеличиваем позицию символа в строке
+                
+                await Task.Delay(1000);
             }
+
+            SetCurrentNode(nextNode);
 
             if (CurrentPosition == text.Length && CurrentNode == endNode)
             {
-                CurrentNode = SetCurrentNode(q7);
                 MessageBox.Show("Цепочка принадлежит языку");
             }
             else
                 MessageBox.Show("Цепочка не принадлежит языку");
+
             Close();
         }
 
         private NodeControl SetCurrentNode(NodeControl node)
         {
             string text = textBox1.Text;
-            if (node != null) node.IsActive = false;//если предыдущее состояние не пустое, убираем свойство активности
+            if (CurrentNode != null) CurrentNode.IsActive = false;//если предыдущее состояние не пустое, убираем свойство активности
 
+            NodeControl next = null;
+            CurrentNode = node;
+            CurrentNode.IsActive = true;
+            viewport1.Invalidate();
 
             if (CurrentPosition < text.Length) //если символы в тексте не кончились
             {
@@ -66,13 +70,12 @@ namespace Automatic_recognizer
                 {
                     join.IsValid = join.Label.Contains(c);//если в строке, которая привязана к ребру, находим такой символ, то isvalid=true;
                     if (join.IsValid)
-                    {
-                        CurrentPosition++; //увеличиваем позицию символа в строке     
-                        return join.To;//если можем перейти, то возвращаем состояние, в которое переходим
+                    { 
+                        next = join.To;//если можем перейти, то запоминает состояние, в которое можно перейти
                     }
                 }
             }
-            return null;//иначе не возвращаем ничего
+            return next;//возвращаем состояние в которое можно перейти, если переходить не куда то тут будет null
         }
 
         private void Form2_Shown(object sender, EventArgs e)
@@ -93,6 +96,8 @@ namespace Automatic_recognizer
             q5.ConnectTo(q1, "b01"); q5.ConnectTo(q6, "a");
             q6.ConnectTo(q0, "b0"); q6.ConnectTo(q2, "a"); q6.ConnectTo(q7, "1");
             q7.ConnectTo(q0, "b01"); q7.ConnectTo(q2, "a");
+
+            endNode = q7;
         }
     }
 }
