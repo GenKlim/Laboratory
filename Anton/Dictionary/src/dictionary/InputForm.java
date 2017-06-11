@@ -1,31 +1,35 @@
 package dictionary;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
-import javax.swing.JList;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.event.ListSelectionEvent;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class InputForm extends javax.swing.JFrame
 {
+    Index Index;    // Хранилище
+    
+    // Модули для поиска
+    SearchNGam SearchNGam; 
+    SearchBKTree SearchBKTree;
+    SearchEQuery SearchEQuery;
+    SearchHash SearchHash;
+     
     public InputForm() {
         initComponents();	// Создание пользовательского интерфейса
         InitDictionary("lang.txt");	// Загрузка словаря по умолчанию
         
-		// Привязка события изменения текста, для автоматической проверки
+        // Привязка события изменения текста, для автоматической проверки
         inputText.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void changedUpdate(DocumentEvent e) {
@@ -42,22 +46,28 @@ public class InputForm extends javax.swing.JFrame
         });
     }
     
-	// Если установлен флаг, то вызывает проверку
+    // Если установлен флаг, то вызывает проверку
     private void CallAutoCheck()
     {
         if(autoCheck.isSelected())
             CheckButtonActionPerformed(null);
     }
     
-	// Загружает словарь из файла
+    // Загружает словарь из файла
     private void InitDictionary(String fileName)
     {
         try {
-			// Чтаем строки из файла
+            // Чтаем строки из файла
             List<String> dictionary = Files.readAllLines(Paths.get(fileName), StandardCharsets.UTF_8);
             
-			// 3 - это размер n-грамма (т.е. в программе изсользуются 3-граммы, это оптимальный размер)
-            Index.init(dictionary, 3);
+            Index = new Index(dictionary);
+            
+            // Создаем структуры для поиска
+            SearchNGam = new SearchNGam(Index, 3); // 3 - это размер n-грамма (т.е. в программе изсользуются 3-граммы, это оптимальный размер)
+            SearchBKTree = new SearchBKTree(Index, 2);
+            SearchEQuery = new SearchEQuery(Index, 2);
+            SearchHash = new SearchHash(Index, 2);
+            
             InfoBox.setText(String.format("Загруженно %d слов", dictionary.size()));
             
         } catch (FileNotFoundException ex) {
@@ -66,8 +76,8 @@ public class InputForm extends javax.swing.JFrame
             Logger.getLogger(InputForm.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-	
-	// Создание пользовательского интерфейса, создано автоматически
+    
+    // Создание пользовательского интерфейса, создано автоматически
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -75,14 +85,25 @@ public class InputForm extends javax.swing.JFrame
         CheckButton = new javax.swing.JButton();
         inputText = new javax.swing.JTextField();
         outputBox = new javax.swing.JScrollPane();
-        outputList = new javax.swing.JList<>();
+        outputListM1 = new javax.swing.JList<>();
         autoCheck = new javax.swing.JCheckBox();
         InfoBox = new javax.swing.JLabel();
         loadDictButton = new javax.swing.JButton();
+        outputBox1 = new javax.swing.JScrollPane();
+        outputListM2 = new javax.swing.JList<>();
+        outputBox2 = new javax.swing.JScrollPane();
+        outputListM3 = new javax.swing.JList<>();
+        outputBox3 = new javax.swing.JScrollPane();
+        outputListM4 = new javax.swing.JList<>();
+        label1 = new java.awt.Label();
+        label2 = new java.awt.Label();
+        label3 = new java.awt.Label();
+        label4 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(463, 254));
         setMinimumSize(new java.awt.Dimension(463, 254));
+        setResizable(false);
         setSize(new java.awt.Dimension(463, 254));
 
         CheckButton.setText("Проверить");
@@ -96,8 +117,9 @@ public class InputForm extends javax.swing.JFrame
         inputText.setToolTipText("");
         inputText.setName("inputText"); // NOI18N
 
-        outputBox.setViewportView(outputList);
-        outputList.getAccessibleContext().setAccessibleName("");
+        outputListM1.setModel(new DefaultListModel());
+        outputBox.setViewportView(outputListM1);
+        outputListM1.getAccessibleContext().setAccessibleName("");
 
         autoCheck.setSelected(true);
         autoCheck.setText("Автоматическая проверка");
@@ -113,6 +135,23 @@ public class InputForm extends javax.swing.JFrame
             }
         });
 
+        outputListM2.setModel( new DefaultListModel());
+        outputBox1.setViewportView(outputListM2);
+
+        outputListM3.setModel( new DefaultListModel());
+        outputBox2.setViewportView(outputListM3);
+
+        outputListM4.setModel( new DefaultListModel());
+        outputBox3.setViewportView(outputListM4);
+
+        label1.setText("BK деревья");
+
+        label2.setText("N-грамм");
+
+        label3.setText("Хеширование по сигнатуре");
+
+        label4.setText("Расширение выборки");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -120,24 +159,40 @@ public class InputForm extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(outputBox)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(autoCheck))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(inputText)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CheckButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(loadDictButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(InfoBox)
-                        .addGap(0, 198, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(autoCheck))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(inputText)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(outputBox, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CheckButton)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(outputBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                            .addComponent(outputBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, 0)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(2, 2, 2)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(InfoBox)
@@ -148,9 +203,23 @@ public class InputForm extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CheckButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(outputBox, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, 0)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(outputBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                            .addComponent(outputBox2)
+                            .addComponent(outputBox1)
+                            .addComponent(outputBox))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         CheckButton.getAccessibleContext().setAccessibleName("CheckButton");
@@ -159,37 +228,39 @@ public class InputForm extends javax.swing.JFrame
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-	//Проверка слова, поиск похожих
+    //Проверка слова, поиск похожих
     private void CheckButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckButtonActionPerformed
-
-        outputList.removeAll();	// Удаляем старое
-        List<String> result = new ArrayList<>();
-
+      
         String input = inputText.getText().toLowerCase();
-        Set<Integer> Result = Index.Instance.search(input);	// Запрашиваем словарь
-
-		// Переводим список индексов в список строк
-        for(int index : Result)
-        {
-            String text = Index.Instance.getByIndex(index);
-
-            if(text.equals(input))	//Если нашли точное совпадение, то не выводим похожие слова
-                return;
-
-            result.add(text);
-        }
-
-		//Выводим на экран
-        outputList = new JList(result.toArray());
-        outputList.setLayoutOrientation(JList.VERTICAL);
-        outputList.addListSelectionListener((ListSelectionEvent e) -> {	// Привязка  событию к нажатия на элемент списка
-            inputText.setText(outputList.getSelectedValue());	// Записываем в поле ввода выбранное слово
-        });
-
-        outputBox.setViewportView(outputList);
+        
+        // Запускаем поиск
+        Search(SearchNGam, outputListM1, input);
+        Search(SearchBKTree, outputListM2, input);
+        Search(SearchEQuery, outputListM3, input);
+        Search(SearchHash, outputListM4, input);
     }//GEN-LAST:event_CheckButtonActionPerformed
 
-	//Загружает словарь из файла
+    // Выполняет поиск указанным алгоритмом и заносит результыты в список
+    void Search(SearchAlgoritm Algoritm, javax.swing.JList<String> OutputList, String input)
+    {
+        DefaultListModel model = (DefaultListModel)OutputList.getModel();
+        model.removeAllElements(); // Удаляем старые результаты
+
+        Set<Integer> Result = Algoritm.search(input);	// Запрашиваем словарь
+
+        // Переводим список индексов в список строк
+        for(int index : Result)
+        {
+            String text = Index.getByIndex(index);
+
+            if(text.equals(input)) //Если нашли точное совпадение, то не выводим похожие слова
+                return;
+
+            model.addElement(text);
+        }
+    }
+    
+    //Загружает словарь из файла
     private void loadDictButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadDictButtonActionPerformed
 
         JFileChooser fileopen = new JFileChooser();
@@ -201,7 +272,7 @@ public class InputForm extends javax.swing.JFrame
         }
     }//GEN-LAST:event_loadDictButtonActionPerformed
 
-	// Точка входа, создано автоматически
+    // Точка входа, создано автоматически
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -239,8 +310,18 @@ public class InputForm extends javax.swing.JFrame
     private javax.swing.JLabel InfoBox;
     private javax.swing.JCheckBox autoCheck;
     private javax.swing.JTextField inputText;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
+    private java.awt.Label label3;
+    private java.awt.Label label4;
     private javax.swing.JButton loadDictButton;
     private javax.swing.JScrollPane outputBox;
-    private javax.swing.JList<String> outputList;
+    private javax.swing.JScrollPane outputBox1;
+    private javax.swing.JScrollPane outputBox2;
+    private javax.swing.JScrollPane outputBox3;
+    private javax.swing.JList<String> outputListM1;
+    private javax.swing.JList<String> outputListM2;
+    private javax.swing.JList<String> outputListM3;
+    private javax.swing.JList<String> outputListM4;
     // End of variables declaration//GEN-END:variables
 }
