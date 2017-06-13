@@ -99,6 +99,10 @@ public class InputForm extends javax.swing.JFrame
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
         label4 = new java.awt.Label();
+        timeLabel1 = new java.awt.Label();
+        timeLabel2 = new java.awt.Label();
+        timeLabel3 = new java.awt.Label();
+        timeLabel4 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(463, 254));
@@ -152,6 +156,14 @@ public class InputForm extends javax.swing.JFrame
 
         label4.setText("Расширение выборки");
 
+        timeLabel1.setText("0");
+
+        timeLabel2.setText("0");
+
+        timeLabel3.setText("0");
+
+        timeLabel4.setText("0");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -174,20 +186,28 @@ public class InputForm extends javax.swing.JFrame
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(outputBox, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
+                            .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(outputBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                            .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                             .addComponent(outputBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, 0)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(outputBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)))
+                        .addGap(2, 2, 2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(timeLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(timeLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(timeLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                        .addGap(0, 0, 0)
+                        .addComponent(timeLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -212,14 +232,20 @@ public class InputForm extends javax.swing.JFrame
                             .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, 0)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(outputBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                            .addComponent(outputBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                             .addComponent(outputBox2)
                             .addComponent(outputBox1)
-                            .addComponent(outputBox))
-                        .addContainerGap())
+                            .addComponent(outputBox)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(timeLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1, 1, 1))
         );
 
         CheckButton.getAccessibleContext().setAccessibleName("CheckButton");
@@ -234,20 +260,23 @@ public class InputForm extends javax.swing.JFrame
         String input = inputText.getText().toLowerCase();
         
         // Запускаем поиск
-        Search(SearchNGam, outputListM1, input);
-        Search(SearchBKTree, outputListM2, input);
-        Search(SearchEQuery, outputListM3, input);
-        Search(SearchHash, outputListM4, input);
+        Search(SearchNGam, outputListM1, input, timeLabel1);
+        Search(SearchBKTree, outputListM2, input, timeLabel2);
+        Search(SearchEQuery, outputListM3, input, timeLabel3);
+        Search(SearchHash, outputListM4, input, timeLabel4);
     }//GEN-LAST:event_CheckButtonActionPerformed
 
     // Выполняет поиск указанным алгоритмом и заносит результыты в список
-    void Search(SearchAlgoritm Algoritm, javax.swing.JList<String> OutputList, String input)
+    void Search(SearchAlgoritm Algoritm, javax.swing.JList<String> OutputList, String input, java.awt.Label TimeLabel)
     {
         DefaultListModel model = (DefaultListModel)OutputList.getModel();
         model.removeAllElements(); // Удаляем старые результаты
 
+        long timeout = System.nanoTime();
         Set<Integer> Result = Algoritm.search(input);	// Запрашиваем словарь
-
+        TimeLabel.setText(String.valueOf(System.nanoTime() - timeout) + " ns");
+        
+        
         // Переводим список индексов в список строк
         for(int index : Result)
         {
@@ -323,5 +352,9 @@ public class InputForm extends javax.swing.JFrame
     private javax.swing.JList<String> outputListM2;
     private javax.swing.JList<String> outputListM3;
     private javax.swing.JList<String> outputListM4;
+    private java.awt.Label timeLabel1;
+    private java.awt.Label timeLabel2;
+    private java.awt.Label timeLabel3;
+    private java.awt.Label timeLabel4;
     // End of variables declaration//GEN-END:variables
 }
