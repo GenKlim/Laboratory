@@ -1,0 +1,6 @@
+verilog work "SEG_Decoder.v"
+verilog work "Divider.v"
+verilog work "VariantTable.v"
+verilog work "Filter.v"
+verilog work "Dysplay.v"
+verilog work "Top.v"

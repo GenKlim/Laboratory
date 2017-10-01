@@ -1,0 +1,12 @@
+[Inputs]
+CLK
+BTNC
+BTNR
+[Outputs]
+LED0
+=SEG[6:0]=
+=AN[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Top
+

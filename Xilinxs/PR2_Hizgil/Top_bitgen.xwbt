@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Anton\Top.ncd
+OUTFILE=C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Anton\Top.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\admin\Documents\Laboratory\Xilinxs\PR2_Anton
+LICENSE=WebPack
+USER_INFO=__0_0_0
